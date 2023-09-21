@@ -6,11 +6,11 @@
 4. ~~4cientos~~
 5. **es_un_mensaje**
 6. ~~no_vale nada~~
-7. ______ejemplo________
-8. mi-programa
-9. ¿Cuántos?
-10. el%Descontado
-11. a150PORHORA
+7. **______ejemplo________**
+8. ~~mi-programa~~
+9. ~~¿Cuántos?~~
+10. ~~el%Descontado~~
+11. **a150PORHORA**
 12. TengoMUCHO$$$$$
 13. LOS400GOLPES
 14. quieroUNAsolución
