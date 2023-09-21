@@ -15,6 +15,8 @@
     print("En octal es", oct(numero_decimal))
     print("En hexadecimal es", hex(numero_decimal))
 ```
+![1º captura](Imagenes/Screenshot_20230921_115345.png)
+
 El prefijo que indica que esta mostrando:
 - **Binario**: El prefijo es el **0b**, que la **b** significa binario. 
 - **Octal**: El prefijo es el **0o**, donde la **o** es octal.
