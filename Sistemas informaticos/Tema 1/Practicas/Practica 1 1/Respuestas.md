@@ -22,3 +22,21 @@ El prefijo que indica que esta mostrando:
 - **Octal**: El prefijo es el **0o**, donde la **o** es octal.
 - **Hexadecimal**: El prefijo es **0x**, que **x** significa hexadecimal.
 
+### 2. El método “int(string, base)” en python permite convertir una cadena de caracteres (string) a un número entero codificado con la base indicada. Si no se indica la base, por defecto utiliza el sistema decimal (base 10). Crea unprograma en python que solicite un número binario y muestre su codificación en octal, hexadecimal y decimal.
+
+```sh
+    #!/usr/bin/env python
+
+    numero_binario = input("Escribe un numero binario: ")
+
+    numero_decimal = 0
+
+    for posicion, digito_string in enumerate(numero_binario[::-1]):
+	    numero_decimal += int(digito_string) * 2 ** posicion
+ 
+    print(f'El número decimal que buscamos es {numero_decimal}')
+
+    print("Numero hexadecimal: ", hex(numero_decimal))
+
+    print("Numero octal: ", oct(numero_decimal))
+```
