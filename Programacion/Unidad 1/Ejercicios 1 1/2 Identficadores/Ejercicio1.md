@@ -1,5 +1,4 @@
-###Dados los siguientes identificadores que se van a utilizar en un programa escrito en Java,
-###¿Cuáles de ellos son correctos y cuáles no?.
+### Dados los siguientes identificadores que se van a utilizar en un programa escrito en Java, ¿Cuáles de ellos son correctos y cuáles no?.
 
 a. ~~mi carta~~
 b. **unacarta**
