@@ -27,16 +27,34 @@ El prefijo que indica que esta mostrando:
 ```sh
     #!/usr/bin/env python
 
-    numero_binario = input("Escribe un numero binario: ")
+    numero_cadena = input("Escribe un numero binario: ")
 
-    numero_decimal = 0
+    numero_binario=int(numero_cadena, 2)
+    
+    print("Numero Decimal: ", int(numero_binario))
 
-    for posicion, digito_string in enumerate(numero_binario[::-1]):
-	    numero_decimal += int(digito_string) * 2 ** posicion
- 
-    print(f'El número decimal que buscamos es {numero_decimal}')
+    print("Numero hexadecimal: ", hex(numero_binario))
 
-    print("Numero hexadecimal: ", hex(numero_decimal))
-
-    print("Numero octal: ", oct(numero_decimal))
+    print("Numero octal: ", oct(numero_binario))
 ```
+
+### 3. Crea un programa en python que solicite un número hexadecimal y muestre su codificación en binario, octal y decimal.
+
+```sh
+    #!/usr/bin/env python
+
+    numero_cadena = input("Escribe un numero hexadecimal: ")
+
+    numero_hexa=int(numero_cadena, 16)
+    
+    print("Numero decimal: ", int(numero_hexa))
+
+    print("Numero binario: ", bin(numero_hexa))
+
+    print("Numero octal: ", oct(numero_hexa))
+```
+
+### 4. Codifica a mano de binario a decimal los siguientes números, comprueba con las aplicaciones realizadas anteriormente si la solución es correcta:
+
+a. 10111~2
+b. 110111~2

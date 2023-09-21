@@ -1,14 +1,11 @@
 #!/usr/bin/env python
 
-numero_binario = input("Escribe un numero binario: ")
+numero_cadena = input("Escribe un numero binario: ")
 
-numero_decimal = 0
+numero_binario=int(numero_cadena, 2)
 
-for posicion, digito_string in enumerate(numero_binario[::-1]):
-	numero_decimal += int(digito_string) * 2 ** posicion
- 
-print(f'El número decimal que buscamos es {numero_decimal}')
+print("Numero Decimal: ", int(numero_binario))
 
-print("Numero hexadecimal: ", hex(numero_decimal))
+print("Numero hexadecimal: ", hex(numero_binario))
 
-print("Numero octal: ", oct(numero_decimal))
+print("Numero octal: ", oct(numero_binario))
