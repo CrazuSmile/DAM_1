@@ -11,6 +11,6 @@
 9. ~~¿Cuántos?~~
 10. ~~el%Descontado~~
 11. **a150PORHORA**
-12. TengoMUCHO$$$$$
-13. LOS400GOLPES
-14. quieroUNAsolución
+12. ~~TengoMUCHO$$$$$~~
+13. ~~LOS400GOLPES~~
+14. **quieroUNAsolución**
