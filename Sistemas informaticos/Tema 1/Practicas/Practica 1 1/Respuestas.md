@@ -2,7 +2,7 @@
 
 ## Sistema de codificacion y aritmetica binaria
 
-1. Crea un fichero llamado “codifica_decimal.py” con el siguiente contenido. Una vez guardado pon permisos de ejecución con “chmod +x codifica_dacimal.py” y obtén una captura del resultado tras ejecutar “./codifica_decimal.py”. ¿Con qué prefijo indica python que está mostrando un número en el sistema de codificación binario, octal y hexadecimal?
+### 1. Crea un fichero llamado “codifica_decimal.py” con el siguiente contenido. Una vez guardado pon permisos de ejecución con “chmod +x codifica_dacimal.py” y obtén una captura del resultado tras ejecutar “./codifica_decimal.py”. ¿Con qué prefijo indica python que está mostrando un número en el sistema de codificación binario, octal y hexadecimal?
 
 ```sh 
     #!/usr/bin/env python3
@@ -19,3 +19,4 @@ El prefijo que indica que esta mostrando:
 - **Binario**: El prefijo es el **0b**, que la **b** significa binario. 
 - **Octal**: El prefijo es el **0o**, donde la **o** es octal.
 - **Hexadecimal**: El prefijo es **0x**, que **x** significa hexadecimal.
+
