@@ -76,7 +76,7 @@ b. 26<sub>10</sub> => 11010
 
 ### 6. Codifica a mano de binario a octal y a hexadecimal los siguientes números, comprueba con las aplicaciones realizadas anteriormente si la solución es correcta.
 
-a. 111101110<sub>2</sub> -> 1DD<sub>16</sub> -> 756<sub>8</sub>
+a. 111101110<sub>2</sub> = 1DD<sub>16</sub> = 756<sub>8</sub>
 |0001|1110|1110|  
 |----|----|----|
 | 1  |  D | D  |
@@ -85,3 +85,35 @@ a. 111101110<sub>2</sub> -> 1DD<sub>16</sub> -> 756<sub>8</sub>
 |---|---|---|
 | 7 | 5 | 6 |
 
+b. 1010111<sub>2</sub> = 57<sub>16</sub> = 127<sub>8</sub>
+|0101|0111|
+|----|----|
+|  5 |  7 |
+
+|001|010|111|
+|---|---|---|
+| 1 | 2 | 7 |
+
+### 7. Codifica a mano de hexademimal a binario los siguientes números, comprueba con las aplicaciones realizadas anteriormente si la solución es correcta.
+
+a. 1F1<sub>16</sub> = 111110001<sub>2</sub>
+| 1  | F  |  1 |
+|----|----|----|
+|0001|1111|0001|
+
+b. A2<sub>16</sub> = 10100010<sub>2</sub>
+| A  | 2  |
+|----|----|
+|1010|0010| 
+
+### 8. Realiza a mano las siguientes operaciones en binario:
+
+a. 100110111 + 1001111 = 1110000110
+
+![suma](Imagenes/SUMA.png)
+
+b. 10110000 – 101111 = 10000001
+
+![resta](Imagenes/resta.png)
+
+c. 
