@@ -57,4 +57,5 @@ El prefijo que indica que esta mostrando:
 ### 4. Codifica a mano de binario a decimal los siguientes números, comprueba con las aplicaciones realizadas anteriormente si la solución es correcta:
 
 a. 10111~2
+
 b. 110111~2
