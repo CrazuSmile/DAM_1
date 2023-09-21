@@ -63,9 +63,11 @@ b. 110111<sub>2</sub> = 1x2^5+1x2^4+1x2^2+1x2^1+1x2^0 = 55
 ### 5. Codifica a mano de decimal a binario los siguientes números, comprueba con las aplicaciones realizadas anteriormente si la solución es correcta.
 
 a. 101<sub>10</sub> => 1100101
+
 |128|64|32|16|8|4|2|1|
 | 0 | 1| 1| 0|0|1|0|1|
 
 b. 26<sub>10</sub> => 11010
+
 |128|64|32|16|8|4|2|1|
 | 0 | 0| 0| 1|1|0|1|0|
