@@ -14,3 +14,10 @@
 12. ~~TengoMUCHO$$$$$~~
 13. ~~LOS400GOLPES~~
 14. **quieroUNAsolución**
+
+### Dados los siguientes identificadores que se van a utilizar en un programa escrito en Java, diga cuáles de ellos son correctos y cuáles no. Justifique su respuesta.
+
+1. descarta2
+2. cuantosQuerrás
+3. Carr3Mesas
+4. çaVaBienAvec$$
