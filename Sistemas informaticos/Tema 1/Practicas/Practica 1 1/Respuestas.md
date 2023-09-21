@@ -73,3 +73,10 @@ b. 26<sub>10</sub> => 11010
 |128|64|32|16|8|4|2|1|
 |---|--|--|--|-|-|-|-|
 | 0 | 0| 0| 1|1|0|1|0|
+
+### 6. Codifica a mano de binario a octal y a hexadecimal los siguientes números, comprueba con las aplicaciones realizadas anteriormente si la solución es correcta.
+
+a. 1 1110 1110<sub>2</sub> -> 
+|0001|1110|1110| = 1DD<sub>16</sub> 
+|----|----|----|
+| 1  |  D | D  |
