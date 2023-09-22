@@ -19,3 +19,14 @@ Significa que la tilde en el Raúl no esta en la codificación que la que python
 
 ![Cambio en codigo](Imagenes/cambio_UTF8.png)
 ![Muestra de resultados](Imagenes/cambio_UTF.png)
+
+#### c. Crea un fichero ejemplo2.py con el siguiente contenido y obtén una captura del resultado tras ejecutar “python2 ejemplo2.py” ¿Qué está haciendo el programa?:
+
+```sh
+    cadena = u'\u00A9\u0052\u0061\u00FA\u006C \u263A'
+    print (cadena)
+```
+
+Muestra por pantalla lo que esta en codificado en la variable cadena:
+
+![Raul](Imagenes/raul.png)
