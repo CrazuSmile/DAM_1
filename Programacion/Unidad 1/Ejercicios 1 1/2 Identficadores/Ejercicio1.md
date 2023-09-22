@@ -17,7 +17,8 @@
 
 ### Dados los siguientes identificadores que se van a utilizar en un programa escrito en Java, diga cuáles de ellos son correctos y cuáles no. Justifique su respuesta.
 
-1. **descarta2**
-2. cuantosQuerrás
-3. Carr3Mesas
-4. çaVaBienAvec$$
+1. **descarta2** Cumple las caracteristicas de la normativa de empezar con minuscula y poner un numero despues.
+2. ~~cuantosQuerrás~~ Posee un caracter no valido, las tildes no pueden ser utilizada
+3. ~~Carr3Mesas~~ Como variable funciona, pero no cumple con las normativas.
+4. **çaVaBienAvec$$** Cumple con las caracteristicas, pero no es recomendable utilizar $ 
+
