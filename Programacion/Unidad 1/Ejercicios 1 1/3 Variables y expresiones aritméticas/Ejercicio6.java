@@ -1,25 +1,16 @@
 public class Ejercicio6 {
 
     public static void main(String[] args) {
-        double resultado, interes, haceinda, interesHacienda, ingreso;
+        double altura, ancho, area, perimetro;
 
-        ingreso = 2000;
+        altura = 15;
+        ancho = 25;
 
-        interes = ((ingreso * 2.75) / 100) / 2;
+        area = altura * ancho;
 
-        System.out.println("Primero se calcula el interes: " + interes);
+        perimetro = 2 * (altura + area);
 
-        haceinda = (interes * 18) / 100;
-
-        System.out.println("Ahora, se calcula el 18% de hacienda: " + haceinda);
-
-        interesHacienda = interes - haceinda;
-
-        System.out.println("Se calcula el total de intereses: " + interesHacienda);
-
-        resultado = interesHacienda + ingreso;
-
-        System.out.println("Por ultimo se suma lo que el banco te pagara: " + resultado + "€");
+        System.out.println("El perimetro del rectangulo es: " + perimetro + " y el area: " + area);
     }
 
 }
