@@ -94,3 +94,49 @@ No se muestra correctamente porque los caracteres estan en foramto ASII de Estad
 #### c. Lee la página https://www.w3schools.com/charsets/ y contesta a la siguiente pregunta: ¿Cuales han sido los estándares de codificación por defecto para las páginas html desde su origen hasta hoy?
 
 Desde HTML 2.0 a HTML 4.01 el estandar de codificacion por defecto era el ISO-8859-1, que es una extension del ASCII. A partir del HTML 4.01 se permite utlizar el UTF-8 y en el HTML 5.0 la codificaion estandar es el UTF-8.
+
+### 3. En GNU/Linux al usar “Shift+Ctrl+U” podemos escribir el código en hexadecimal UNICODE de cualquier carácter aunque no esté en el teclado. Intenta escribir en LibreOffice Writer los siguientes emoticonos indicando la codificación hexadecimal utilizada. Podemos buscar el carácter en http://www.unicode.org/charts/#symbols
+
+
+
+### 4. Imagina que tienes que inventar un código que haga corresponder cada carácter a un número binario. Para nuestro sistema informático únicamente necesitamos usar los números 0, 1, 2 y 3, las vocales en minúsculas y mayúsculas y las consonantes “S”, “R” y “P”. ¿De cuantos bits será el código que necesitamos?. Diseñarlo y escribir en tu código la palabra “SERPIS”.
+
+Para poder colocar 17 carcateres, necesito 5 bits, que son 32 combinaciones posibles, SERPIS es igual a: 01110 01010 01111 10000 01011 01110
+00000 -> 0
+00001 -> 1
+00010 -> 2
+00011 -> 3
+00100 -> a
+00101 -> e
+00110 -> i
+00111 -> o
+01000 -> u
+01001 -> A
+01010 -> E
+01011 -> I
+01100 -> O
+01101 -> U
+01110 -> S
+01111 -> R
+10000 -> P
+
+### 5. Realiza en una tabla todas las combinaciones con 4 bits e indica que valor representa si estuviera codificado en los formatos signo-magnitud o en coma fija.
+
+|Combinaciones con 4 bits|Valor signo-magnitud|Valor en coma fija|
+|------------------------|--------------------|------------------|
+|0000|0|0|
+|0001|1|1|
+|0010|2|2|
+|0011|3|3|
+|0100|4|4|
+|0101|5|5|
+|0110|6|6|
+|0111|7|7|
+|1000|0|8|
+|1001|-1|9|
+|1010|-2|10|
+|1011|-3|11|
+|1100|-4|12|
+|1101|-5|13|
+|1110|-9|14|
+|1111|-7|15|
