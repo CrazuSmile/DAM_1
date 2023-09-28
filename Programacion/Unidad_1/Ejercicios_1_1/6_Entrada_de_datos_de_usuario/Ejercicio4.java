@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejercicio5 {
+public class Ejercicio4 {
     public static void main(String[] args) {
         double ingreso, interes, plazo, interesTotal, interesHacienda, total;
         Scanner tcl = new Scanner(System.in);
