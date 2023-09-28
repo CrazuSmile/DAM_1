@@ -201,3 +201,30 @@ c. - 2’25 = -225 * 10<sup>-2</sup> = 11100001 * 2<sup>-2</sup> = 1 01111110 11
 d. 10’8 = 108 * 10<sup>-1</sup> = 1101100 * 2<sup>-1</sup> = 0 01111111 10110000000000000000000 
 
 128-1 = 127 = 01111111
+
+### 10. Realiza las siguientes operaciones de resta utilizando el complemento a 2 y longitudes de palabra de 8 bits. Recuerda que la resta se realiza como suma del minuendo más el complemento a 2 del substraendo.
+
+a. 11001110 – 10110111 = 11001110 + 01001001 = 00010111
+
+Ca1: 10110111 = 01001000 -> Ca2: 01001000 + 1 = 01001001
+
+b. 11001001 – 1101010 = 11001001 + 0010110 = 11011111
+
+Ca1: 1101010 = 0010101 -> Ca2: 0010101 + 1 = 0010110
+
+c. 1010011 – 111100 = 1010011 + 000100 = 01010111
+
+Ca1: 111100 = 000011 -> Ca2: 000011 + 1 = 000100
+
+d. 11011101 – 10101 = 1101 1101 + 0 1011 = 11100000
+
+Ca1: 10101 = 01010 -> Ca2: 01010 + 1 = 01011
+
+### 11. Nos compramos un disco duro de 6 TB, cantidad expresada correctamente en el sistema internacional de medidas, pero nuestro sistema operativo trabaja con el sistema tradicional binario. ¿Qué diferencia de tamaño (entre MB y MiB) encontraremos al instalarlo en nuestro PC y comprobar el espacio disponible? ¿Cuántos TiB disponibles veremos?
+
+6 TB (Terabytes) son 6 * 10<sup>12</sup> bytes por lo tanto en MB es igual a 6.000.000 MB y en MiB es de 5.722.045,8984375, hay una diferencia de 277.954,101562. 
+
+### 12. Comprueba con el comando “free” la RAM del equipo de clase en GB,GiB, MB y MiB. Ayuda ejecutando “man free”.
+
+
+
