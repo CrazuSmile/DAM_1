@@ -102,22 +102,39 @@ Desde HTML 2.0 a HTML 4.01 el estandar de codificacion por defecto era el ISO-88
 ### 4. Imagina que tienes que inventar un código que haga corresponder cada carácter a un número binario. Para nuestro sistema informático únicamente necesitamos usar los números 0, 1, 2 y 3, las vocales en minúsculas y mayúsculas y las consonantes “S”, “R” y “P”. ¿De cuantos bits será el código que necesitamos?. Diseñarlo y escribir en tu código la palabra “SERPIS”.
 
 Para poder colocar 17 carcateres, necesito 5 bits, que son 32 combinaciones posibles, SERPIS es igual a: 01110 01010 01111 10000 01011 01110
+
 00000 -> 0
+
 00001 -> 1
+
 00010 -> 2
+
 00011 -> 3
+
 00100 -> a
+
 00101 -> e
+
 00110 -> i
+
 00111 -> o
+
 01000 -> u
+
 01001 -> A
+
 01010 -> E
+
 01011 -> I
+
 01100 -> O
+
 01101 -> U
+
 01110 -> S
+
 01111 -> R
+
 10000 -> P
 
 ### 5. Realiza en una tabla todas las combinaciones con 4 bits e indica que valor representa si estuviera codificado en los formatos signo-magnitud o en coma fija.
