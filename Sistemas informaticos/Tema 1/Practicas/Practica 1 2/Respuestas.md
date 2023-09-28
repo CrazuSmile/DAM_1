@@ -92,3 +92,5 @@ No se muestra correctamente porque los caracteres estan en foramto ASII de Estad
 ```
 
 #### c. Lee la página https://www.w3schools.com/charsets/ y contesta a la siguiente pregunta: ¿Cuales han sido los estándares de codificación por defecto para las páginas html desde su origen hasta hoy?
+
+Desde HTML 2.0 a HTML 4.01 el estandar de codificacion por defecto era el ISO-8859-1, que es una extension del ASCII. A partir del HTML 4.01 se permite utlizar el UTF-8 y en el HTML 5.0 la codificaion estandar es el UTF-8.
