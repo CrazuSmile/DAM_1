@@ -31,4 +31,24 @@ Muestra por pantalla lo que esta en codificado en la variable cadena:
 
 ![Raul](Imagenes/raul.png)
 
-#### d. 
+#### d. Crea ahora un fichero llamado ejemplo3.py con el siguiente contenido y obtén una captura del resultado tras ejecutar “python2 ejemplo3.py” ¿Qué está haciendo el programa?:
+
+```sh
+    #-*- coding:utf-8 *-*
+    letra = 'Ñ'
+    print (hex(ord(letra.decode("utf-8"))))
+```
+
+Muestra por pantalla el codigo utf-8 que seria la letra Ñ en hexadecimal, que es el 0xd1
+
+![UTF-8](Imagenes/utf8.png)
+
+#### e. Crea ahora un fichero llamado ejemplo4.py con el siguiente contenido, pon permiso de ejecución con “chmod +x ejemplo4.py” y obtén una captura del resultado tras ejecutar “./ejemplo4.py”. ¿Por qué ahora he podido usar caracteres no ASCII en el código y no he obtenido mensajes de error?
+
+```sh
+    #!/usr/bin/env python3
+    nombre = input ("¿Cómo te llamas? ")
+    print("Hola ",nombre)
+```
+
+![Ejemplo 4](Imagenes/ejemplo4.png)
