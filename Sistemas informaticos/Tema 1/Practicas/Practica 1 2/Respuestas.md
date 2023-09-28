@@ -140,3 +140,48 @@ Para poder colocar 17 carcateres, necesito 5 bits, que son 32 combinaciones posi
 |1101|-5|13|
 |1110|-9|14|
 |1111|-7|15|
+
+### 6. Haz la representación en exceso 128 con 8 bits de los números siguientes:
+
+a. 6 = 128 + 6 = 134 = 10000110
+
+|128|64|32|16|8|4|2|1|
+|---|--|--|--|-|-|-|-|
+|1  |0 |0 |0 |0|1|1|0|
+
+b. -11 = 128 + (-11) = 117 = 01110101
+
+|128|64|32|16|8|4|2|1|
+|---|--|--|--|-|-|-|-|
+|  0| 1| 1| 1|0|1|0|1|
+
+c. 0 = 128 + 0 = 128 = 10000000
+
+d. 156 = 128 + 156 = 284, excede los bits que se pueden representar con exceso 128 con 8 bits, solo alcanza hasta al 255
+
+### 7. Representa en complemento a 2 los siguientes números en binario:
+
+a. 101001110 = 010110010
+
+Ca1: 101001110 = 010110001 -> Ca2: 010110001 + 1 = 010110010  
+
+b. 101101110 = 010010010
+
+Ca1: 101101110 = 010010001 -> Ca2: 010010001 + 1 = 010010010
+
+c. 101011111000 = 010100001000
+
+Ca1: 101011111000 = 010100000111 -> Ca2: 010100000111 + 1 = 010100001000
+
+d. 11000110001011 = 00111001110101
+
+Ca1: 11000110001011 = 00111001110100 -> Ca2: 00111001110100 + 1 = 00111001110101 
+
+### 8. Representa en BCD los siguientes números decimales:
+
+a. 34 = 0011 0100
+b. 217 = 0010 0001 0111
+c. 2523 = 0010 0101 0010 0011
+d. 77900 = 0111 0111 1111 0000 0000
+
+### 9. Normaliza en IEEE 754 de simple precisión, o coma flotante, los números reales:
