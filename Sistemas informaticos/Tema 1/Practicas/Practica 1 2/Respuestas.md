@@ -52,3 +52,41 @@ Muestra por pantalla el codigo utf-8 que seria la letra Ñ en hexadecimal, que e
 ```
 
 ![Ejemplo 4](Imagenes/ejemplo4.png)
+
+Python 3 autodetecta la codificaion que se esta usando, por lo tanto es capaz a de mostrar caracteres que no son ASCII.
+
+### 2. Crea un fichero llamado ejemplo.html con el siguiente contenido:
+
+```sh
+    <!doctype html>
+    <html lang="es">
+        <head>
+            <meta charset="us-ascii">
+            <title>Ejemplo HTML5</title>
+        </head>
+        <body>
+            <p>Hola Raúl</p>
+        </body>
+    </html>
+```
+
+#### a. Abre el fichero ejemplo.html con un navegador web y obtén una captura de pantalla del resultado. ¿Por qué no se muestra correctamente la página?
+
+![1º HTML](Imagenes/1html.png)
+
+No se muestra correctamente porque los caracteres estan en foramto ASII de Estados Unidos.
+
+#### b. Modifica el ejemplo.html para solucionar el problema.
+
+```sh
+    <!doctype html>
+    <html lang="es">
+        <head>
+            <meta charset="utf-8">
+            <title>Ejemplo HTML5</title>
+        </head>
+        <body>
+            <p>Hola Raúl</p>
+        </body>
+    </html>
+```
