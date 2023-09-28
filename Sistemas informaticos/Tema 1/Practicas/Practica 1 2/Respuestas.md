@@ -90,3 +90,5 @@ No se muestra correctamente porque los caracteres estan en foramto ASII de Estad
         </body>
     </html>
 ```
+
+#### c. Lee la página https://www.w3schools.com/charsets/ y contesta a la siguiente pregunta: ¿Cuales han sido los estándares de codificación por defecto para las páginas html desde su origen hasta hoy?
