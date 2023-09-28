@@ -30,3 +30,5 @@ Significa que la tilde en el Raúl no esta en la codificación que la que python
 Muestra por pantalla lo que esta en codificado en la variable cadena:
 
 ![Raul](Imagenes/raul.png)
+
+#### d. 
