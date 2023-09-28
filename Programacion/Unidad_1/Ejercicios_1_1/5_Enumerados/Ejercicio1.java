@@ -8,7 +8,8 @@ public class Ejercicio1 {
         DiasSemana martes = DiasSemana.Martes;
         DiasSemana domingo = DiasSemana.Domingo;
 
-        System.out.println("El segundo dia de la semana es "+martes+" y quedan 6 dias para el "+domingo);
+        System.out.println("El segundo dia de la semana es "+martes);
+        System.out.println(" Y el domingo es el dia numero "+(domingo.ordinal()+1));
     }
 
 }
