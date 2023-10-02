@@ -48,4 +48,27 @@ b. F = [(a + b) * !(a * c)] + (b * !c)
 |1|0|1|0|
 |1|1|1|0|
 
-c. F = (a + c) + (a * b * c)
+![Respuesta 2 b](imagenes/2/respuesta2b.png)
+
+c. F = !(a + c) (+) !(a * b * c)
+
+|a|b|c|F|
+|-|-|-|-|
+|0|0|0|0|
+|1|0|0|1|
+|0|1|0|0|
+|0|0|1|1|
+|0|1|1|1|
+|1|1|0|1|
+|1|0|1|1|
+|1|1|1|0|
+
+![Respuesta 2 c](imagenes/2/respuesta2c.png)
+
+### 4 Escribe la ecuación y la tabla de verdad de los siguientes circuitos:
+
+a. F = (A * !B) + (!A * B)
+
+b. F = ![!A + (!A * !B) + !(A * B)] + B 
+
+c. F = ![((!A * B) (+) !(B + C)) * (!(C + B) + C + !C)]
