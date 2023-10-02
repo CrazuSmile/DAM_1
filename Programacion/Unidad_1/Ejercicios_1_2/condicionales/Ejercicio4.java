@@ -11,7 +11,7 @@ public class Ejercicio4 {
         num1 = tcl.nextFloat();
         num2 = tcl.nextFloat();
 
-        if (num1 > num2) {
+        if (num1 < num2) {
             System.out.println("El orden seria: " + num1 + ", " + num2);
 
         } else {
