@@ -6,12 +6,46 @@
 
 a. 
 
-![1a](imagenes/1a.png)
+![1a](imagenes/1/1a.png)
 
-Actuan como puerta NOR, ya que cuando son 0 el resultado es 1 y cuando cualquiera de los 2 o los 2 a la vez, el resultado es 0.
+Actuan como puerta AND, ya que solo se activa cuando ambos pin son 1.
 
-![Respuesta 1 a](imagenes/respuesta1a.png)
+![Respuesta 1 a](imagenes/1/respuesta1a.png)
 
 b. 
 
-![]()
+![Respuesta 1 b](imagenes/1/respuesta1b.png)
+
+Los transistores actuan como una puerta OR, porque cuando uno de los pines es 1, el resultado ya es 1.
+
+### 2 Implementa con puertas lógicas las funciones siguientes, escribe sus tablas de verdad y comprueba si los resultados son correctos con el simulador, captura una imagen de cada circuito en funcionamiento.
+
+a. F = (a + b + !c ) + !(a * b)
+
+|a|b|c|F|
+|-|-|-|-|
+|0|0|0|1|
+|1|0|0|1|
+|0|1|0|1|
+|0|0|1|1|
+|0|1|1|1|
+|1|1|0|1|
+|1|0|1|1|
+|1|1|1|1|
+
+![Respuesta 2 a](imagenes/2/respuesta2a.png)
+
+b. F = [(a + b) * !(a * c)] + (b * !c)
+
+|a|b|c|F|
+|-|-|-|-|
+|0|0|0|0|
+|1|0|0|1|
+|0|1|0|1|
+|0|0|1|0|
+|0|1|1|1|
+|1|1|0|1|
+|1|0|1|0|
+|1|1|1|0|
+
+c. F = (a + c) + (a * b * c)
