@@ -80,6 +80,27 @@ b. F = ![!A + (!A * !B) + !(A * B)] + B
 
 |A|B|F|
 |-|-|-|
-
+|0|0|0|
+|1|0|0|
+|0|1|1|
+|1|1|1|
 
 c. F = ![((!A * B) (+) !(B + C)) * (!(C + B) + C + !C)]
+
+|A|B|C|F|
+|-|-|-|-|
+|0|0|0|0|
+|1|0|0|0|
+|0|1|0|0|
+|0|0|1|1|
+|1|1|0|1|
+|0|1|1|0|
+|1|0|1|1|
+|1|1|1|1|
+
+### 5 Comprueba los teoremas de la absorción y Leyes de Morgan con puertas lógicas usando el simulador.
+
+![Respuesta1](imagenes/5/respuesta.png)
+
+### 6 Escribir la expresión booleana, símbolo y tabla de verdad para una puerta NAND y NOR de cuatro entradas.
+
