@@ -65,6 +65,11 @@ c. F = !(a + c) (+) !(a * b * c)
 
 ![Respuesta 2 c](imagenes/2/respuesta2c.png)
 
+### 3 Con Pycharm escribe un programa en python que sirva para comprobar si los circuitos del ejercicio anterior son correctos. El tipo booleano en python “bool” puede tomar los valores “True” o “False”, si pasamos un tipo entero “int” a booleano el “True” lo convierte en 1 y el “False” en 0, y a la inversa. Los comparadores booleanos disponibles en python son: and, or, not y ^(para XOR).
+
+![Codigo](imagenes/3/codigo.png)
+![Resultado](imagenes/3/resultado.png)
+
 ### 4 Escribe la ecuación y la tabla de verdad de los siguientes circuitos:
 
 a. F = (A * !B) + (!A * B)
