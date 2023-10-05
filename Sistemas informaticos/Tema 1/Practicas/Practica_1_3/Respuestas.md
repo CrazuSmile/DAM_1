@@ -127,7 +127,45 @@ F= !(A * B * C * D)
 |1|1|0|1|1|
 |0|1|1|1|1|
 |0|1|0|1|1|
-|1|1|1|1|1|
+|1|1|1|1|0|
+
+F= !(A +B + C + D)
+
+|A|B|C|D|F|
+|-|-|-|-|-|
+|0|0|0|0|1|
+|1|0|0|0|0|
+|0|1|0|0|0|
+|0|0|1|0|0|
+|0|0|0|1|0|
+|1|1|0|0|0|
+|0|1|1|0|0|
+|0|0|1|1|0|
+|1|0|1|0|0|
+|1|0|0|1|0|
+|1|1|1|0|0|
+|1|1|0|1|0|
+|0|1|1|1|0|
+|0|1|0|1|0|
+|1|1|1|1|0|
+
+### 7 Busca en alguna tienda de electrónica un circuito integrado con puertas NAND. Indica que circuito es, pon una captura del encapsulado del circuito y el diagrama de conexiones de los pines.
+
+![Puerta](imagenes/7/puertaNAND.png)
+![Digrama](imagenes/7/diagrama.png)
+https://www.electrocomponentes.es/circuitos-integrados/941-74ls00-4-puertas-nand-dos-entradas-logicas-circuito-integrado-7400-gates.html
 
 
+### 8 Simplifica las siguientes ecuaciones lógicas aplicando las leyes y teoremas del álgebra de Boole. Indica los pasos realizados para cada simplificación indicando la ley o teorema utilizado y comprueba con el simulador que los 2 circuitos son equivalentes.
 
+a. F = (x + y) * (x + y')
+    F = x + (y * !y)
+    F = x 
+
+![Respuesta](imagenes/8/a.png)
+
+b. F = (x + y) '* (x' + y')'
+    F = (x * !x) + (y * !y)
+    F = 0
+
+c. F=B*((D * C') + (D * C)) + (A * B)
