@@ -158,14 +158,16 @@ https://www.electrocomponentes.es/circuitos-integrados/941-74ls00-4-puertas-nand
 
 ### 8 Simplifica las siguientes ecuaciones lógicas aplicando las leyes y teoremas del álgebra de Boole. Indica los pasos realizados para cada simplificación indicando la ley o teorema utilizado y comprueba con el simulador que los 2 circuitos son equivalentes.
 
-a. F = (x + y) * (x + y')
-    F = x + (y * !y)
+a. F = (x + y) * (x + y') ->
+    F = x + (y * !y) ->
     F = x 
 
 ![Respuesta](imagenes/8/a.png)
 
-b. F = (x + y) '* (x' + y')'
-    F = (x * !x) + (y * !y)
+b. F = (x + y) '* (x' + y')' -> (Morgan)
+    F = (!!x * !y) + (!!y * !x) -> (involucion)
+    F = (x*!y) + (y*!x) -> (Asociativa)
+    F = (x*!x) + (y*!y) -> 
     F = 0
 
 c. F=B*((D * C') + (D * C)) + (A * B)
