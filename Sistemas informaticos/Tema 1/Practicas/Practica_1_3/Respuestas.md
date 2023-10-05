@@ -170,4 +170,4 @@ b. F = (x + y) '* (x' + y')' -> (Morgan)
     F = (x*!x) + (y*!y) -> 
     F = 0
 
-c. F=B*((D * C') + (D * C)) + (A * B)
+c. F = B * ((D * C') + (D * C)) + (A * B) -> (Distributiva) F = B + (D * D) * (C * !C)  + (A * B) -> (Complementacion) F = B + (A * B) -> (Abosrcion) -> F = B
