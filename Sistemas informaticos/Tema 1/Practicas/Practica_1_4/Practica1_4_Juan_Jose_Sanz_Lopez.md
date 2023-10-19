@@ -4,8 +4,8 @@
 
 ### 1. Crea la tabla de verdad de un codificador de 8 entradas. Prueba con el simulador logisim que la tabla de verdad es correcta. ¿Qué significa que el codificador de logisim tiene prioridad?
 
-|A|B|C|D|E|F|H|G|Resultado|
-|-|-|-|-|-|-|-|-|---------|
+|E0|E1|E2|E3|E4|E5|E6|E7|Resultado|
+|--|--|--|--|--|--|--|--|---------|
 |1|0|0|0|0|0|0|0|000|
 |0|1|0|0|0|0|0|0|001|
 |0|0|1|0|0|0|0|0|010|
