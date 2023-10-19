@@ -40,3 +40,17 @@ El resultado sera el del D=1, porque las entradas de seleccion S0=1 y S1=1, que 
 |1|11|0|0|0|1|
 
 ### 4. Completa el circuito siguiente para que con una entrada de 4 bits que muestra el dígito hexadecimal correspondiente, encienda un led cuando el dígito sea 0, 5, A o F.
+
+![Diagrama](imagenes/4/diagrm.png)
+
+### 5. Prueba con el logisim un “selector de bit” y explica cuál es su utilidad. ¿Es un circuito combinacional o secuencial?
+
+Muestra el bit de entrada que el bit de seleccion indique. Es un circuito combinacional.
+
+### 6. Diseña con puertas lógicas un sumador (HA) de 2 bits teniendo en cuenta la salida y el acarreo, no tengas en cuenta el acarreo de entrada. Compruébalo con el simulador.
+
+![Sumador](imagenes/6/respuesta.png)
+
+### 7. Diseña con puertas lógicas un sumador (FA) de 2 bits teniendo en cuenta la salida y el acarreo tanto de entrada como de salida. Compruébalo con el simulador.
+
+![SUmador Completo](imagenes/7/respuesta.png)
