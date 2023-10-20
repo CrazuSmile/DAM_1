@@ -70,4 +70,4 @@ Muestra el bit de entrada que el bit de seleccion indique. Es un circuito combin
 
 ### 11. Crea en el simulador un contador del 0 al 15 con biestables J-K comprobando que funciona bien, en la salida debe aparecer la cuenta del 0 al 15 en binario de forma automática y con un separador de bits mostrar también la cuenta en decimal.
 
-![diagrama](imagenes/11/diagrama.png)
+![diagrama](imagenes/11/respuesta.png)
