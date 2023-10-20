@@ -54,3 +54,16 @@ Muestra el bit de entrada que el bit de seleccion indique. Es un circuito combin
 ### 7. Diseña con puertas lógicas un sumador (FA) de 2 bits teniendo en cuenta la salida y el acarreo tanto de entrada como de salida. Compruébalo con el simulador.
 
 ![SUmador Completo](imagenes/7/respuesta.png)
+
+### 8. Crea un circuito restador de 8 bits en logisim, puedes utilizar todos los elementos disponibles en el simulador menos el restador.
+
+
+### 9. Crea la tabla de verdad de un biestable J-K teniendo en cuenta los posibles estados anteriores. Comprueba tus resultados con el simulador logisim.
+
+### 10. Busca en alguna tienda de electrónica un circuito integrado con biestables tipo D. Indica que circuito es, pon una captura del encapsulado del circuito y el diagrama de conexiones de los pines.
+
+![Biestable D](https://www.compic.es/2960-thickbox_default/cd4042-cuadruple-biestable-tipo-d-cmos.jpg)
+
+### 11. Crea en el simulador un contador del 0 al 15 con biestables J-K comprobando que funciona bien, en la salida debe aparecer la cuenta del 0 al 15 en binario de forma automática y con un separador de bits mostrar también la cuenta en decimal.
+
+!()[]
