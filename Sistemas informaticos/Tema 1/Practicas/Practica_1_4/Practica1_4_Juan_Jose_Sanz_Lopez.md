@@ -64,6 +64,10 @@ Muestra el bit de entrada que el bit de seleccion indique. Es un circuito combin
 
 ![Biestable D](https://www.compic.es/2960-thickbox_default/cd4042-cuadruple-biestable-tipo-d-cmos.jpg)
 
+![Diagrama](https://www.compic.es/2961-thickbox_default/cd4042-cuadruple-biestable-tipo-d-cmos.jpg)
+
+![Transistor](https://www.compic.es/2959-thickbox_default/cd4042-cuadruple-biestable-tipo-d-cmos.jpg)
+
 ### 11. Crea en el simulador un contador del 0 al 15 con biestables J-K comprobando que funciona bien, en la salida debe aparecer la cuenta del 0 al 15 en binario de forma automática y con un separador de bits mostrar también la cuenta en decimal.
 
 !()[]
