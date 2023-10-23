@@ -25,18 +25,13 @@ public class Ejercicio8 {
 
         if (mesA > 0 && mesA < 13 && mesN > 0 && mesN < 13) {
             if (diaA > 0 && diaA <= 31 && diaN > 0 && diaN <= 31) {
-                if (mesA > mesN) {
-                    if (diaA > diaN) {
-                        edad = añoA - añoN;
-                        System.out.println("Tienes " + edad + " años");
-                    } else {
-                        edad = añoA - (añoN + 1);
-                        System.out.println("Tienes " + edad + " años");
-
-                    }
+                if (diaA >= diaN && mesA >= mesN) {
+                    edad = añoA - añoN;
+                    System.out.println("Tu edad es de " + edad + " año");
                 } else {
                     edad = añoA - (añoN + 1);
-                    System.out.println("Tienes " + edad + " años");
+                    System.out.println("Tu edad es de " + edad + " año");
+
                 }
             } else {
                 System.out.println("Introduce un dia correcto");
