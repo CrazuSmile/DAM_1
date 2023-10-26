@@ -4,16 +4,16 @@
 
 ### 1. Crea la tabla de verdad de un codificador de 8 entradas. Prueba con el simulador logisim que la tabla de verdad es correcta. ¿Qué significa que el codificador de logisim tiene prioridad?
 
-|E0|E1|E2|E3|E4|E5|E6|E7|Resultado|
-|--|--|--|--|--|--|--|--|---------|
-|1|0|0|0|0|0|0|0|000|
-|0|1|0|0|0|0|0|0|001|
-|0|0|1|0|0|0|0|0|010|
-|0|0|0|1|0|0|0|0|011|
-|0|0|0|0|1|0|0|0|100|
-|0|0|0|0|0|1|0|0|101|
-|0|0|0|0|0|0|1|0|110|
-|0|0|0|0|0|0|0|1|111|
+| E0  | E1  | E2  | E3  | E4  | E5  | E6  | E7  | Resultado |
+| --- | --- | --- | --- | --- | --- | --- | --- | --------- |
+| 1   | 0   | 0   | 0   | 0   | 0   | 0   | 0   | 000       |
+| 0   | 1   | 0   | 0   | 0   | 0   | 0   | 0   | 001       |
+| 0   | 0   | 1   | 0   | 0   | 0   | 0   | 0   | 010       |
+| 0   | 0   | 0   | 1   | 0   | 0   | 0   | 0   | 011       |
+| 0   | 0   | 0   | 0   | 1   | 0   | 0   | 0   | 100       |
+| 0   | 0   | 0   | 0   | 0   | 1   | 0   | 0   | 101       |
+| 0   | 0   | 0   | 0   | 0   | 0   | 1   | 0   | 110       |
+| 0   | 0   | 0   | 0   | 0   | 0   | 0   | 1   | 111       |
 
 
 Un codificador con prioridad significa que si hay varias entradas a la vez, mostrara la entrada de mayor valor.
@@ -28,16 +28,16 @@ El resultado sera el del D=1, porque las entradas de seleccion S0=1 y S1=1, que 
 
 ### 3. Prueba en el simulador logisim un demultiplexor de 4 salidas. Crea la tabla de verdad con los resultados obtenidos.
 
-|Entrada|Seleccion|Salida1|Salida2|Salida3|Salida4|
-|-------|---------|-------|-------|-------|-------|
-|0|00|0|0|0|0|
-|0|01|0|0|0|0|
-|0|10|0|0|0|0|
-|0|11|0|0|0|0|
-|1|00|1|0|0|0|
-|1|01|0|1|0|0|
-|1|10|0|0|1|0|
-|1|11|0|0|0|1|
+| Entrada | Seleccion | Salida1 | Salida2 | Salida3 | Salida4 |
+| ------- | --------- | ------- | ------- | ------- | ------- |
+| 0       | 00        | 0       | 0       | 0       | 0       |
+| 0       | 01        | 0       | 0       | 0       | 0       |
+| 0       | 10        | 0       | 0       | 0       | 0       |
+| 0       | 11        | 0       | 0       | 0       | 0       |
+| 1       | 00        | 1       | 0       | 0       | 0       |
+| 1       | 01        | 0       | 1       | 0       | 0       |
+| 1       | 10        | 0       | 0       | 1       | 0       |
+| 1       | 11        | 0       | 0       | 0       | 1       |
 
 ### 4. Completa el circuito siguiente para que con una entrada de 4 bits que muestra el dígito hexadecimal correspondiente, encienda un led cuando el dígito sea 0, 5, A o F.
 
