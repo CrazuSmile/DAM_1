@@ -5,7 +5,7 @@
 1. [Pregunta 1](#1-contesta-brevemente-y-con-tus-palabras-las-siguientes-preguntas1)
 2. 
 ### [1. Contesta brevemente y con tus palabras las siguientes preguntas:](#indice)
-#### a. ¿Cuál es la característica principal de la arquitectura de Von Neumann?
+#### a. ¿Cuál es la característica principal de la arquitectura de Von Neumann? {:. page-1}
 Unio todos los componentes del ordenador de forma permanente siendo coordinados con un control central.
 
 #### b. ¿Qué componente del procesador es el que realiza realmente los cálculos?
