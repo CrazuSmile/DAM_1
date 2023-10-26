@@ -21,25 +21,29 @@ public class Ejercicio9 {
             System.out.println(numero);
 
         } else {
+            System.out.print(numero+" = ");
             while (numero > 1) {
                 if (numero % 2 == 0) {
-                    System.out.print("*2*");
+                    System.out.print("2");
                     numero /= 2;
                 }
                 if (numero % 3 == 0) {
-                    System.out.print("*3*");
+                    System.out.print("3");
                     numero /= 3;
                 }
                 if (numero % 5 == 0) {
-                    System.out.print("*5*");
+                    System.out.print("5");
                     numero /= 5;
                 }
                 if (numero % 7 == 0) {
-                    System.out.print("*7*");
+                    System.out.print("7");
                     numero /= 7;
                 }
-
+                if (numero > 1) {
+                    System.out.print(" * ");
+                }
             }
+            
 
         }
     }
