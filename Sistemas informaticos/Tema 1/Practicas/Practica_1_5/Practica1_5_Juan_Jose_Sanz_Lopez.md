@@ -4,11 +4,11 @@
 
 ## Indice
 
-1. [Pregunta 1](#1-contesta-brevemente-y-con-tus-palabras-las-siguientes-preguntas1)
+1. [Pregunta 1](#1-contesta-brevemente-y-con-tus-palabras-las-siguientes-preguntas)
 2. [Pregunta 2](#2-¿cuanta-memoria-en-teoría-como-máximo-se-podría-direccionar-directamente-con-un-procesador-de-32-bits-y-con-uno-de-64-bits)
 3. [Pregunta 3](#3-explica-brevemente-la-diferencia-que-existe-entre-una-arquitectura-de-procesador-tipo-risc-y-otra-tipo-cisc)
 
-### [1. Contesta brevemente y con tus palabras las siguientes preguntas:](#indice)
+### 1. Contesta brevemente y con tus palabras las siguientes preguntas:
 
 #### a. ¿Cuál es la característica principal de la arquitectura de Von Neumann?
 
@@ -45,8 +45,8 @@ Los perifericos son dispositivos que permiten la capacidad de interactuar con el
 
 Es el conjunto de acciones necesarios para realizar un funcion. Las dos fases son *Fase de busqueda* y *Fase de ejecucion*.
 
-### [2. ¿Cuanta memoria en teoría como máximo se podría direccionar directamente con un procesador de 32 bits y con uno de 64 bits?](#indice)
+### 2. ¿Cuanta memoria en teoría como máximo se podría direccionar directamente con un procesador de 32 bits y con uno de 64 bits?
 
 Un procesador de 32 bits pueden manejar una memoria RAM de 4GB, mientras que un procesador de 64 bits, unos 16 Exabytes.
 
-### [3. Explica brevemente la diferencia que existe entre una arquitectura de procesador tipo RISC y otra tipo CIS](#indice)
+### 3. Explica brevemente la diferencia que existe entre una arquitectura de procesador tipo RISC y otra tipo CISC.
