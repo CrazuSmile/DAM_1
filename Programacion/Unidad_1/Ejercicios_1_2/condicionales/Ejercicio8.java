@@ -27,10 +27,10 @@ public class Ejercicio8 {
             if (diaA > 0 && diaA <= 31 && diaN > 0 && diaN <= 31) {
                 if (diaA >= diaN && mesA >= mesN) {
                     edad = añoA - añoN;
-                    System.out.println("Tu edad es de " + edad + " año");
+                    System.out.println("Tu edad es de " + edad + " años");
                 } else {
                     edad = añoA - (añoN + 1);
-                    System.out.println("Tu edad es de " + edad + " año");
+                    System.out.println("Tu edad es de " + edad + " años");
 
                 }
             } else {
