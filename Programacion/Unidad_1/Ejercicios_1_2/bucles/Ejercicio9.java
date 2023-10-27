@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicio9 {
     public static void main(String[] args) {
-        int numero, contador = 2;
+        int numero, contador = 2, inicio;
         boolean primo = true;
 
         Scanner lector = new Scanner(System.in);
@@ -18,32 +18,21 @@ public class Ejercicio9 {
             contador++;
         }
         if (primo) {
-            System.out.println(numero);
+            System.out.println(numero + " = " + numero + " * 1");
 
         } else {
-            System.out.print(numero+" = ");
-            while (numero > 1) {
-                if (numero % 2 == 0) {
-                    System.out.print("2");
-                    numero /= 2;
-                }
-                if (numero % 3 == 0) {
-                    System.out.print("3");
-                    numero /= 3;
-                }
-                if (numero % 5 == 0) {
-                    System.out.print("5");
-                    numero /= 5;
-                }
-                if (numero % 7 == 0) {
-                    System.out.print("7");
-                    numero /= 7;
-                }
-                if (numero > 1) {
+
+            System.out.print(numero + " = ");
+
+            for (inicio = 1; inicio <= (numero + 1); inicio++) {
+
+                if (numero % inicio == 0) {
+                    System.out.print(inicio);
+                    numero /= inicio;
                     System.out.print(" * ");
                 }
             }
-            
+            System.out.println(numero);
 
         }
     }
