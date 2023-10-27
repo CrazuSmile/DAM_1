@@ -24,7 +24,7 @@ public class Ejercicio9 {
 
             System.out.print(numero + " = ");
 
-            for (inicio = 1; inicio <= (numero + 1); inicio++) {
+            for (inicio = 1; inicio <= numero; inicio++) {
 
                 if (numero % inicio == 0) {
                     System.out.print(inicio);
