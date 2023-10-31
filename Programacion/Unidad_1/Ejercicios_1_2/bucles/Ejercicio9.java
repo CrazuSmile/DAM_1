@@ -4,36 +4,28 @@ import java.util.Scanner;
 
 public class Ejercicio9 {
     public static void main(String[] args) {
-        int numero, contador = 2, inicio;
-        boolean primo = true;
-
+        int numero, divisor = 2;
         Scanner lector = new Scanner(System.in);
 
         System.out.print("Introduce un numero a factorizar: ");
         numero = lector.nextInt();
 
-        while ((primo) && (contador != numero)) {
-            if (numero % contador == 0)
-                primo = false;
-            contador++;
+        while (numero <= 0) {
+            System.out.print("Introduce un valor correcto: ");
+            numero = lector.nextInt();
         }
-        if (primo) {
-            System.out.println(numero + " = " + numero + " * 1");
-
-        } else {
-
-            System.out.print(numero + " = ");
-
-            for (inicio = 1; inicio <= numero; inicio++) {
-
-                if (numero % inicio == 0) {
-                    System.out.print(inicio);
-                    numero /= inicio;
+        System.out.print(numero + " = ");
+        while (numero > 1) {
+            if (numero % divisor == 0) {
+                System.out.print(divisor);
+                numero /= divisor;
+                if (numero > 1) {
                     System.out.print(" * ");
                 }
+            } else {
+                divisor++;
             }
-            System.out.println(numero);
-
         }
+
     }
 }

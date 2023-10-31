@@ -10,13 +10,15 @@ public class Ejercicio10 {
         double porcentajeCara = 0, porcentajeCruz = 0;
         for (contador = 1; contador <= 1000000; contador++) {
             if (valorAleatorio % 2 == 0) {
-                porcentajeCara = (contador * 100) / 1000000;
+                porcentajeCara++;
             } else {
-                porcentajeCruz = 100 - porcentajeCara; 
+                porcentajeCruz++;
 
             }
-            valorAleatorio = random.nextInt(10)+1;
+            valorAleatorio = random.nextInt(10) + 1;
         }
+        porcentajeCara /= 10000;
+        porcentajeCruz /= 10000;
         System.out.println("El porcentaje de veces que la moneda dara cara seran un " + porcentajeCara + "%");
         System.out.println("El porcentaje de veces que la moneda dara cruz seran un " + porcentajeCruz + "%");
 
