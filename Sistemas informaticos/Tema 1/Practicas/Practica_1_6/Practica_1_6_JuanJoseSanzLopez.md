@@ -24,3 +24,20 @@
 * Modo escalado, convierte la pantalla en una ventana completa, quitando los menus de configuracion y ayuda de Virtual Box, puedes entrar con la combinacion Ctrl derecho + C.
 
 ### 4. Instala Ubuntu 22.04 Desktop en una máquina virtual nueva con 4 GB de RAM,un disco duro de expansión dinámica de 50 GB, 2 procesadores y 64 MB dememoria de vídeo. Instala las “Guest Additions” y obtén una captura de pantalla del sistema virtualizado en ejecución tras finalizar la instalación.
+
+![Instalacion de Ubuntu](imagenes/4/instalacionUbuntu.png)
+![Disco duro](imagenes/4/discoDuro.png)
+![RAM](imagenes/4/ram.png)
+![Memoria de video](imagenes/4/memoriaVideo.png)
+
+### 5. En la máquina virtual de Ubuntu configura la red como adaptador puente y realiza un ping desde la máquina real a la máquina virtual. Cambia la configuración del adaptador de red a NAT y vuelve a realizar las mismas pruebas. Obtén las capturas de pantalla con los resultados. ¿Qué diferencia hay entre usar un adaptador puente o NAT?
+
+![ping Puente](imagenes/5/pingPuente.png)
+![ping NAT](imagenes/5/pingNAT.png)
+
+La diferencia entre el adaptador puente y el nat, el nat es mas lento y provoca perdidas, mientras que el puente no tiene estos problemas. A cambio la NAT es mas segura.
+
+### 6. Crea un directorio en la máquina real llamado “CompartidaVM”. En cada máquina virtual crea una carpeta compartida llamada también “CompartidaVM” desde “Dispositivos → Preferencias de carpetas compartidas” con las opciones de “Automontar” y “Hacer permanente”. Haz una captura de pantalla donde se muestre el directorio “CompartidaVM” abierto en el sistema anfitrión y la misma carpeta abierta en el sistema huésped. Para que se realice automáticamente el montaje en la máquina virtual de Ubuntu es necesario que tu usuario de la máquina virtual pertenezca al grupo “vboxsf” *(sudo adduser tu_usuario vboxsf)*
+
+![Carpeta compartida Ubuntu](imagenes/6/carpetaCompartidaUbuntu.png)
+![Carpeta compartida Windows](imagenes/6/compartidaWindows.png)
