@@ -41,3 +41,35 @@ La diferencia entre el adaptador puente y el nat, el nat es mas lento y provoca 
 
 ![Carpeta compartida Ubuntu](imagenes/6/carpetaCompartidaUbuntu.png)
 ![Carpeta compartida Windows](imagenes/6/compartidaWindows.png)
+
+### 7. Realiza una instantánea de la máquina virtual Windows. Realiza cualquier cambio en el sistema operativo y retrocede a la instantánea creada. Comprueba que los cambios realizados ya no existen.
+
+![Antes](imagenes/7/antes.png)
+![Durante](imagenes/7/durante.png)
+![Despues](imagenes/7/despues.png)
+
+### 8. Obtén una captura de pantalla de “Archivo → Administrador de medios virtuales” de VirtualBox. ¿Dónde se almacenan realmente las máquina virtuales? ¿Por qué el tamaño actual de los discos es diferente al tamaño establecido en la instalación?
+
+![Administrador de medios virtuales](imagenes/8/administradorMediosVirtuales.png)
+
+Los discos duros .vdi estan guardados en subcarpetas de sus respectivos sistemas operativos a los que esten asignados en la carptea de Virtual Box.
+
+Son diferentes porque los .vdi creados son discos duros dinamicos, lo que significa que su tamaño actual ira variando hasta el limite establecido por el usuario al crearlo.
+
+### 9. Realiza una exportación en formato “ova” de la máquina virtual de Ubuntu. Elimina la máquina virtual de virtualbox y realiza la importación de la máquina exportada. Comprueba que la máquina nueva arranca.
+
+![Exportar](imagenes/9/exportar.png)
+![Exportar 1](imagenes/9/exportar1.png)
+![Exportar 2](imagenes/9/exportar2.png)
+![OVA](imagenes/9/ova.png)
+![Importar](imagenes/9/importar.png)
+![Importar 1](imagenes/9/importar1.png)
+![Importar 2](imagenes/9/importar2.png)
+![Importado](imagenes/9/importado.png)
+
+### 10. Elimina las instantáneas de la máquina virtual Windows y el fichero “ova” de la máquina virtual Ubuntu.
+
+![Antes Windows](imagenes/10/antesW.png)
+![Despues Windows](imagenes/10/despuesw.png)
+![Antes Ubuntu](imagenes/10/antesU.png)
+![Despues Ubuntu](imagenes/10/despuesU.png)
