@@ -16,8 +16,6 @@ public class Ejercicio9 {
         System.out.print("Introduce un segundo valor: ");
         y = lector.nextDouble();
 
-        System.out.println("El inverso de los dos numeros es " + (1 / x) + ", " + (1 / y)
-                + " y la Media Armonica de los dos numeros es " + mediaArmonica(x, y) + " y su inversa es "
-                + (1 / mediaArmonica(x, y)));
+        System.out.println("la Media Armonica de los dos numeros es " + mediaArmonica(x, y));
     }
 }
