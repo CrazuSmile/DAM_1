@@ -4,10 +4,20 @@ import java.util.Scanner;
 
 public class Ejercicio9 {
     static double mediaArmonica(double num1, double num2) {
-        return ((num1 + num2) / 2) / ((1 / num1) + (1 / num2));
+        return 2 / ((1 / num1) + (1 / num2));
     }
+
     public static void main(String[] args) {
-        int x, y;
+        double x, y;
         Scanner lector = new Scanner(System.in);
+
+        System.out.print("Introduce un valor: ");
+        x = lector.nextDouble();
+        System.out.print("Introduce un segundo valor: ");
+        y = lector.nextDouble();
+
+        System.out.println("El inverso de los dos numeros es " + (1 / x) + ", " + (1 / y)
+                + " y la Media Armonica de los dos numeros es " + mediaArmonica(x, y) + " y su inversa es "
+                + (1 / mediaArmonica(x, y)));
     }
 }
