@@ -4,7 +4,15 @@ public class Coche {
     private String modelo;
     private String color;
     private String matricula;
-    private String tipoCoche;
+
+    private enum tipoCoche {
+        MINI, UTILITARIO, FAMILIAR, DEPORTIVO
+    }
+
+    private enum seguro {
+        TERCEROS, A_TODO_RIESGO
+    }
+
     private boolean pintura;
     private int año;
 
