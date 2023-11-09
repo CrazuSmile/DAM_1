@@ -1,30 +1,35 @@
 package Programacion.Unidad_2.Ejercicios.Ejercici_2_1.Ejercicio1;
 
 public class Coche {
-    private String modelo;
-    private String color;
-    private String matricula;
-
-    private enum tipoCoche {
+    enum TipoCoche {
         MINI, UTILITARIO, FAMILIAR, DEPORTIVO
     }
 
-    private enum seguro {
+    enum Seguro {
         TERCEROS, A_TODO_RIESGO
     }
 
+    private String modelo;
+    private String color;
+    private String matricula;
     private boolean pintura;
     private int año;
+    private TipoCoche miCoche;
+    private Seguro miSeguro;
 
-    public void imprimeCoche(String nomModelo, String nomColor, boolean metalico) {
-        modelo = nomModelo;
-        color = nomColor;
-        pintura = metalico;
+    public String getModelo(){
+        return modelo;
+    }
 
-        if (metalico) {
-            System.out.print(modelo + " " + color + " metalico");
-        } else {
-            System.out.print(modelo + " " + color + " no metalico");
-        }
+    public void setModelo(String nombre){
+        this.modelo = nombre;
+    }
+
+    public String getColor(){
+        return color;
+    }
+
+    public void setColor(String color){
+        this.color = color;
     }
 }
