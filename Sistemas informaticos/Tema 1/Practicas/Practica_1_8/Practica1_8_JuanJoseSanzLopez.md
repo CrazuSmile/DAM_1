@@ -50,3 +50,9 @@ La advertencia dice que la resistencia del grupo ha sido reducida, que compruebe
 #### c) Para la máquina virtual y añade otro disco llamado “reemplazo”.
 
 ![Reemplazo](imagenes/reemplazo.png)
+
+#### d) Inicia la máquina y agrega el nuevo disco al RAID para volver a tener tolerancia a fallos.
+
+![Añadir reemplazo](imagenes/añadirRemplazo.png)
+
+#### e) Quita del RAID el disco que ha fallado.
