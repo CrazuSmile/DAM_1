@@ -43,4 +43,10 @@ Se esta guardando en ambos.
 
 ![Falta disco](imagenes/faltaUnDisco.png)
 
-#### b) b) Revisa el administrador de espacios de almacenamiento. ¿Qué significa la advertencia que tenemos?
+#### b) Revisa el administrador de espacios de almacenamiento. ¿Qué significa la advertencia que tenemos?
+
+La advertencia dice que la resistencia del grupo ha sido reducida, que compruebe las unidades fisicas para saber porque.
+
+#### c) Para la máquina virtual y añade otro disco llamado “reemplazo”.
+
+![Reemplazo](imagenes/reemplazo.png)
