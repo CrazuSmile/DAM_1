@@ -28,3 +28,19 @@
 
 ![Creacion de los grupos de discos](imagenes/crearGrupoDiscos.png)
 ![Grupo creado](imagenes/Crear.png)
+
+#### d) Guarda en el nuevo volumen “DATOS” un fichero llamado “importante.txt” con el contenido que quieras.
+
+![Importante.txt](imagenes/importante.png)
+
+#### e) ¿Físicamente en qué disco duro se está guardando el fichero “importante.txt?
+
+Se esta guardando en ambos.
+
+### 4. Vamos a suponer que un disco del RAID ha fallado y que lo tenemos que sustituir por otro. Con la máquina virtual apagada desconecta el disco “disco2” e inicia el sistema.
+
+#### a) Comprueba que el fichero “importante.txt” sigue estando accesible.
+
+![Falta disco](imagenes/faltaUnDisco.png)
+
+#### b) b) Revisa el administrador de espacios de almacenamiento. ¿Qué significa la advertencia que tenemos?
