@@ -56,3 +56,14 @@ La advertencia dice que la resistencia del grupo ha sido reducida, que compruebe
 ![Añadir reemplazo](imagenes/añadirRemplazo.png)
 
 #### e) Quita del RAID el disco que ha fallado.
+
+![Eliminar RAID fallido](imagenes/eliminarRaidFallido.PNG)
+
+#### f) Comprueba que ahora el grupo de almacenamiento es correcto y que seguimos teniendo acceso al fichero “importante.txt”.
+
+![Importante esta](imagenes/importanteSigueAqui.PNG)
+
+#### g) ¿Qué ventaja e inconveniente tiene tener 2 discos configurados en RAID1?
+
+La ventaja es que mantiene los datos incluso si uno de ellos falla, y la desventaja, gastas 2 discos duros pero solo utilizas la memoria de uno.
+
