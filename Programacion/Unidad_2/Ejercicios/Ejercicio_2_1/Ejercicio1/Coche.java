@@ -1,4 +1,4 @@
-package Programacion.Unidad_2.Ejercicios.Ejercici_2_1.Ejercicio1;
+package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.Ejercicio1;
 
 public class Coche {
     enum TipoCoche {
@@ -17,19 +17,26 @@ public class Coche {
     private TipoCoche miCoche;
     private Seguro miSeguro;
 
-    public String getModelo(){
+    public void imprimirCoche() {
+        modelo = "Ason Martin";
+        color = "Verde";
+        System.out.println("El coche es " + modelo + color);
+    }
+
+    public String getModelo() {
         return modelo;
     }
 
-    public void setModelo(String nombre){
+    public void setModelo(String nombre) {
         this.modelo = nombre;
     }
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 
-    public void setColor(String color){
+    public void setColor(String color) {
         this.color = color;
     }
+
 }
