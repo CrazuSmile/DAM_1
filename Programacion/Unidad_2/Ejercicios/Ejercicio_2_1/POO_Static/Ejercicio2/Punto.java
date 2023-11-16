@@ -6,11 +6,6 @@ public class Punto {
     static int origenX = 0;
     static int origenY = 0;
 
-    Punto() {
-        y = 0;
-        x = 0;
-    }
-
     Punto(int x, int y) {
         this.y = y;
         this.x = x;
