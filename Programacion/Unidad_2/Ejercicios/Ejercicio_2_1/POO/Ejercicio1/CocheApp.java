@@ -1,4 +1,4 @@
-package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.Ejercicio1;
+package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.POO.Ejercicio1;
 
 import java.util.Scanner;
 

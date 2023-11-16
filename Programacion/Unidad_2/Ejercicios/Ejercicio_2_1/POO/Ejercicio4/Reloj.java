@@ -1,4 +1,4 @@
-package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.Ejercicio4;
+package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.POO.Ejercicio4;
 
 public class Reloj {
     private int hora, minuto, segundo;

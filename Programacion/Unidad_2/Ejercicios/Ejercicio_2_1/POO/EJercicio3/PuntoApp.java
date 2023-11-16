@@ -1,4 +1,4 @@
-package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.EJercicio3;
+package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.POO.EJercicio3;
 
 public class PuntoApp {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.Ejercicio2;
+package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.POO.Ejercicio2;
 
 public class Carrera {
     private String nombre;

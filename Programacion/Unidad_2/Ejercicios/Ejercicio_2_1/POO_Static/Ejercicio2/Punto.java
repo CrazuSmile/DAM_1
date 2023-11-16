@@ -1,7 +1,10 @@
-package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.EJercicio3;
+package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.POO_Static.Ejercicio2;
 
 public class Punto {
+
     private int x, y;
+    static int origenX = 0;
+    static int origenY = 0;
 
     Punto() {
         y = 0;
@@ -22,7 +25,7 @@ public class Punto {
     }
 
     public void distancia(int x, int y) {
-        int resultado = (x+y) ^ (1 / 2);
+        int resultado = (x + y) ^ (1 / 2);
         System.out.println("La distancia es de " + resultado);
     }
 

@@ -1,4 +1,4 @@
-package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.Ejercicio5;
+package Programacion.Unidad_2.Ejercicios.Ejercicio_2_1.POO.Ejercicio5;
 
 public class Movil {
     private double x, y, velocidad, tiempo;
