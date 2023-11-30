@@ -1,31 +1,35 @@
-package Programacion.Unidad_2.SumatorioN.ejercicio2;
+package Programacion.Unidad_2.MediaDeN.ejercicio3;
 
 import java.util.Scanner;
 
-public class Sumatorio {
-
-    static void sumatorio(int n) {
+public class Media {
+    static float media(int n) {
         Scanner tcl = new Scanner(System.in);
         float resultado = 0, valor = 0;
+        int i;
 
-        for (int i = 1; i <= n; i++) {
+        for (i = 1; i <= n; i++) {
             resultado = resultado + valor;
             System.out.print("      Introduce el valor " + i + ": ");
             valor = tcl.nextFloat();
         }
         resultado = resultado + valor;
-        
-        System.out.println(" ");
-        System.out.println("El sumatorio de los valores es: " + resultado);
+        resultado = resultado / i;
+
+        return resultado;
     }
 
     public static void main(String[] args) {
         Scanner tcl = new Scanner(System.in);
         int n = 0;
-        
+        float resultado;
+
         System.out.println("¿Cuantos valores se van a introducir?");
         n = tcl.nextInt();
 
-        sumatorio(n);
+        resultado = media(n);
+
+        System.out.println(" ");
+        System.out.println("La media de los valores es: " + resultado);
     }
 }
