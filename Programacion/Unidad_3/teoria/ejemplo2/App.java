@@ -7,13 +7,14 @@ public class App {
 
         coche1.acelerar(80);
         coche1.repostar(12);
-        coche1.consumo = 2;
+        coche1.consumo = 0.5f;
         coche1.avanzar();
 
         coche1.imprimir();
 
         vehiculo1.ruedas = 2;
         vehiculo1.velocidad = 100;
+        vehiculo1.avanzar(200);
 
         vehiculo1.imprimir();
 
