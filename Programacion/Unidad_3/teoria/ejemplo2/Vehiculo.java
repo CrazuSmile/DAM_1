@@ -17,7 +17,7 @@ public class Vehiculo {
     }
 
     protected void avanzar(int km) {
-        distancia = km;
+        this.distancia += km;
     }
 
     protected void imprimir() {
