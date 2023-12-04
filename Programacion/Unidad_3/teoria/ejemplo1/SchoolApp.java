@@ -10,6 +10,6 @@ public class SchoolApp {
 
         alumno1.imprime();
 
-        alumno1.ponGrupo("Dog", null);
+        alumno1.ponGrupo("Dog", new Horario());
     }
 }
