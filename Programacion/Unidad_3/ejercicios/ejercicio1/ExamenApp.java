@@ -7,7 +7,7 @@ public class ExamenApp {
         Hora hora1 = new Hora(12, 21);
 
         examen1.setAsignatura("Programacion");
-        examen1.setAula(2);
+        examen1.setAula("Usos Multiples");
 
         System.out.println("El examen de la asigantura de " + examen1.getAsignatura() + " es en el aula "
                 + examen1.getAula() + ", el dia " + fecha1.toString() + " a las " + hora1.toString());

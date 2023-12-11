@@ -1,10 +1,12 @@
 package Programacion.Unidad_3.ejercicios.ejercicio1;
 
 public class Examen {
-    protected String asignatura;
-    protected int aula;
+    private String asignatura;
+    private String aula;
+    private Hora horaExamen;
+    private Fecha fechaExamen;
 
-    protected void setAsignatura(String asignatura) {
+    public void setAsignatura(String asignatura) {
         this.asignatura = asignatura;
     }
 
@@ -12,12 +14,13 @@ public class Examen {
         return asignatura;
     }
 
-    public void setAula(int aula) {
+    public void setAula(String aula) {
         this.aula = aula;
     }
 
-    public int getAula() {
+    public String getAula() {
         return aula;
     }
+
 
 }
