@@ -22,6 +22,6 @@ public class Vehiculo {
 
     protected void imprimir() {
         System.out.println("Un vehiculo de " + ruedas + " ruedas va a una velocidad de " + velocidad
-                + " km/h y recorre un distancia de " + distancia + " km");
+                + " km/h y recorre un distancia de " + distancia + " km.\n");
     }
 }

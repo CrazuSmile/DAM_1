@@ -9,20 +9,29 @@ public class Coche extends Vehiculo {
         gasolina += litros;
     }
 
-    protected int avanzar() {
-        float gasolinaConsumida = gasolina;
-        int km = 0;
-        while (gasolinaConsumida > 0) {
-            km = km + velocidad;
-            gasolinaConsumida -= consumo;
+    /*
+     * protected int avanzar() {
+     * float gasolinaConsumida = gasolina;
+     * int km = 0;
+     * while (gasolinaConsumida > 0) {
+     * km = km + velocidad;
+     * gasolinaConsumida -= consumo;
+     * }
+     * return km;
+     * }
+     */
+
+    public void avanzar() {
+        while (this.gasolina > 0) {
+            this.gasolina -= consumo;
+            this.distancia++;
         }
-        return km;
     }
 
     protected void imprimir() {
-        System.out.println("Un vehiculo de " + ruedas + " ruedas va a una velocidad de " + velocidad
-                + " km/h con una cantidad de gasolina de " + gasolina + " litros \nConsume " + consumo
-                + " litros por hora y avanza " + avanzar() + " km");
+        System.out.println("\nUn vehiculo de " + ruedas + " ruedas va a una velocidad de " + gasolina
+                + " litros \nConsume " + consumo
+                + " litros por hora y avanza " + distancia + " km antes de que se agote la gasolina.\n");
 
     }
 }
