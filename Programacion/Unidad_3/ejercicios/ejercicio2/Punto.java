@@ -1,4 +1,4 @@
-package Programacion.Unidad_3.ejercicios.ejericicio2;
+package Programacion.Unidad_3.ejercicios.ejercicio2;
 
 public class Punto {
     private float x;
