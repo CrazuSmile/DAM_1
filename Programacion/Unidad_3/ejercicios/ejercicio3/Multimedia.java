@@ -19,16 +19,12 @@ public class Multimedia {
         this.autor = autor;
         this.añoPublicacion = añoPublicacion;
         this.miFormato = miFormato;
-        if (hora >= 0) {
+        if (hora >= 0 && minuto > 0 && minuto < 60 && segundo > 0 && segundo < 60) {
             this.hora = hora;
-        }
-        if (minuto > 0 && minuto < 60) {
             this.minuto = minuto;
-        }
-        if (segundo > 0 && segundo < 60) {
             this.segundo = segundo;
         } else {
-            this.segundo = 1;
+            System.out.println("ERROR: Duracion no valida.");
         }
     }
 
@@ -107,5 +103,11 @@ public class Multimedia {
         return "Titulo: " + titulo + "." + miFormato + "\nAutor: " + autor + "\nAño de publicacion: " + añoPublicacion
                 + "\nDuracion: " + hora + ":" + minuto + ":"
                 + segundo;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        // TODO Auto-generated method stub
+        return super.equals(obj);
     }
 }
