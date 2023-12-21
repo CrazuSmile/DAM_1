@@ -32,6 +32,6 @@ public class Pelicula extends Multimedia {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return super.toString() + "Reparto: " + actorPrincipal + ", " + actrizPrincipal;
+        return super.toString() + "\nReparto: " + actorPrincipal + ", " + actrizPrincipal;
     }
 }

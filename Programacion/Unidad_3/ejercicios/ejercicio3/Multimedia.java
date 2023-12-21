@@ -27,6 +27,8 @@ public class Multimedia {
         }
         if (segundo > 0 && segundo < 60) {
             this.segundo = segundo;
+        } else {
+            this.segundo = 1;
         }
     }
 
@@ -69,6 +71,8 @@ public class Multimedia {
     public void setHora(int hora) {
         if (hora >= 0) {
             this.hora = hora;
+        } else {
+            System.out.println("ERROR: La duracion en horas no puede ser negativa.");
         }
     }
 
@@ -80,12 +84,16 @@ public class Multimedia {
         if (minuto > 0 && minuto < 60) {
             this.minuto = minuto;
 
+        } else {
+            System.out.println("ERROR: La duracion en minutos no puede ser negativa.");
         }
     }
 
     public void setSegundo(int segundo) {
         if (segundo > 0 && segundo < 60) {
             this.segundo = segundo;
+        } else {
+            System.out.println("ERROR: La duracion en segundos no puede ser negativa.");
         }
     }
 
@@ -97,7 +105,7 @@ public class Multimedia {
     public String toString() {
         // TODO Auto-generated method stub
         return "Titulo: " + titulo + "." + miFormato + "\nAutor: " + autor + "\nAño de publicacion: " + añoPublicacion
-                + "\nDuracion" + hora + ":" + minuto + ":"
+                + "\nDuracion: " + hora + ":" + minuto + ":"
                 + segundo;
     }
 }
