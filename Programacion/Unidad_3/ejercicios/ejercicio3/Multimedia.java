@@ -13,7 +13,8 @@ public class Multimedia {
     protected int minuto;
     protected int segundo;
 
-    Multimedia(String titulo, String autor, int añoPublicacion, Formato miFormato, int hora, int minuto, int segundo) {
+    public Multimedia(String titulo, String autor, int añoPublicacion, Formato miFormato, int hora, int minuto,
+            int segundo) {
         this.titulo = titulo;
         this.autor = autor;
         this.añoPublicacion = añoPublicacion;
@@ -95,7 +96,8 @@ public class Multimedia {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return titulo + "." + miFormato + ", " + autor + ", " + ", " + añoPublicacion + ", " + hora + ":" + minuto + ":"
+        return "Titulo: " + titulo + "." + miFormato + "\nAutor: " + autor + "\nAño de publicacion: " + añoPublicacion
+                + "\nDuracion" + hora + ":" + minuto + ":"
                 + segundo;
     }
 }

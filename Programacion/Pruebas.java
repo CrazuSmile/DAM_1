@@ -11,6 +11,7 @@ public class Pruebas {
     public static void main(String[] args) {
         Scanner tcl = new Scanner(System.in);
         int usuario, i, cara = 0, cruz = 0;
+        Random random = new Random();
         int valorAleatorio = random.nextInt(10) + 1;
         String moneda = "+o";
         System.out.print("Numero de lanzamientos ");
