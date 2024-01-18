@@ -1,6 +1,6 @@
 package Programacion.Unidad_4.ejercicio1.ejercicio3;
 
-public class Coche extends Vehiculo implements IAvanzar{
+public class Coche extends Vehiculo{
     protected float kmRecorrido;
 
     public Coche(String marca, String modelo, int anyoFabricacion) {

@@ -1,6 +1,6 @@
 package Programacion.Unidad_4.ejercicio1.ejercicio3;
 
-public class Vehiculo {
+public abstract class Vehiculo implements IAvanzar{
     protected String marca;
     protected String modelo;
     protected int anyoFabricacion;

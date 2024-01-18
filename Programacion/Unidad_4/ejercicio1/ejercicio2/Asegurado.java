@@ -2,7 +2,7 @@ package Programacion.Unidad_4.ejercicio1.ejercicio2;
 
 import java.util.Calendar;
 
-public class Asegurado {
+public class Asegurado{
     protected String nombre;
     protected String apellido1;
     protected String apellido2;
@@ -47,10 +47,12 @@ public class Asegurado {
         this.añoNacimiento = añoNacimiento;
     }
 
-    public int edad(int edad) {
+    public int edad() {
+        int edad;
         Calendar rightNow = Calendar.getInstance();
         edad = rightNow.get(Calendar.YEAR) - añoNacimiento;
         return edad;
     }
 
+    
 }
