@@ -25,4 +25,10 @@ public class SeguroVida extends Seguro {
         }
 
     }
+
+    @Override
+    public int compararSeguro() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'compararSeguro'");
+    }
 }
