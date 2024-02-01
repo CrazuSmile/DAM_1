@@ -1,6 +1,7 @@
 package Programacion;
 
 import java.util.Scanner;
+import java.time.Year;
 import java.util.Random;
 
 /**
@@ -9,24 +10,11 @@ import java.util.Random;
  */
 public class Pruebas {
     public static void main(String[] args) {
-        Scanner tcl = new Scanner(System.in);
-        int usuario, i, cara = 0, cruz = 0;
-        Random random = new Random();
-        int valorAleatorio = random.nextInt(10) + 1;
-        String moneda = "+o";
-        System.out.print("Numero de lanzamientos ");
-        usuario = tcl.nextInt();
+        Date fecha = new Date();
+        int year = Year.now().getValue();
 
-        for (i = 1; i <= usuario; i++) {
-            if (valorAleatorio == 1) {
-                System.out.print("Moneda: " + moneda.charAt(valorAleatorio) + " ");
-                cara++;
-            } else {
-                System.out.print("Moneda: " + moneda.charAt(valorAleatorio) + " ");
-                cruz++;
-            }
-            valorAleatorio = random.nextInt(10) + 1;
-        }
-        System.out.print("Cara (+): " + cara + "\nCruz (o): " + cruz);
+        System.out.println(year);
+
+
     }
 }
