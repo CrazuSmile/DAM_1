@@ -34,12 +34,11 @@ public class Producto {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        if ( instanceof PC) {
-            return "PC#" + codProducto;
-        } else if (obj instanceof Movil) {
-            return "Movil#" + codProducto;
-        }
-        return null;
+        return this.getClass().getSimpleName() + " - " + this.getCodProducto();
+    }
+    public static void main(String[] args){
+        Producto p = new Movil(3, "hola", 0, null,null,null);
+        System.out.println(p);
     }
 
     @Override
