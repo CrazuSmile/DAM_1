@@ -2,6 +2,7 @@ package Programacion;
 
 import java.util.Scanner;
 import java.time.Year;
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -10,11 +11,10 @@ import java.util.Random;
  */
 public class Pruebas {
     public static void main(String[] args) {
-        Date fecha = new Date();
-        int year = Year.now().getValue();
+        String[] vectorOrigal = { "hola", "que", "tal" };
+        String[] copia =Arrays.str vectorOrigal;
 
-        System.out.println(year);
-
+        System.out.println("Vector copia " + Arrays.toString(copia));
 
     }
 }
