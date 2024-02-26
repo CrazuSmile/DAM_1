@@ -7,11 +7,24 @@ public class ContarEspacios {
         Scanner scn = new Scanner(System.in);
         String frase;
 
-        System.out.print("Introduza uan frase: ");
+        System.out.print("Introduza una frase: ");
         frase = scn.nextLine();
-        int primerEspacio = frase.indexOf(" ");
 
+        int contador = contadorEspacios(frase);
 
+        System.out.println("La frase tiene " + contador + " espacios");
 
+    }
+
+    private static int contadorEspacios(String frase) {
+        int contador = 0;
+
+        for (int i = 0; i < frase.length(); i++) {
+            if (frase.charAt(i) == ' ') {
+                contador++;
+            }
+
+        }
+        return contador;
     }
 }
