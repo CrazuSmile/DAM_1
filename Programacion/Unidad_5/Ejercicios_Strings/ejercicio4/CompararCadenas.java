@@ -19,7 +19,7 @@ public class CompararCadenas {
         System.out.println(" ");
         comparar(primeraCadena, segundaCadena);
 
-        System.out.println(" ");
+        System.out.println("");
     }
 
     private static void comparar(String primeraCadena, String segundaCadena) {
