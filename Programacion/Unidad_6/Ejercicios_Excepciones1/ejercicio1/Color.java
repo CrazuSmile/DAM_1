@@ -34,8 +34,10 @@ public enum Color {
             return ROSA;
         else if("VIOLETA".equalsIgnoreCase(colorStr))
             return VIOLETA;
-        else 
+        else if("MAGENTA".equalsIgnoreCase(colorStr))
             return MAGENTA;
+        else
+            throw new RuntimeException("La figura debe tener un color");
         
     }
 }
