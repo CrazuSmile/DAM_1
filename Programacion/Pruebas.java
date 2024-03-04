@@ -11,10 +11,7 @@ import java.util.Random;
  */
 public class Pruebas {
     public static void main(String[] args) {
-        String[] vectorOrigal = { "hola", "que", "tal" };
-        String[] copia =Arrays.str vectorOrigal;
-
-        System.out.println("Vector copia " + Arrays.toString(copia));
-
+        String[] prueba1 = { "hola", "que", "tal" };
+        System.out.println("Vector copia " + Arrays.toString(prueba1));
     }
 }
