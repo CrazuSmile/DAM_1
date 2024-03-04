@@ -10,6 +10,14 @@ import java.util.Random;
  * @author juasanlop2
  */
 public class Pruebas {
+    
+    private int num;
+    private String frase;
+    
+    
+    
+
+
     public static void main(String[] args) {
         String[] prueba1 = { "hola", "que", "tal" };
         System.out.println("Vector copia " + Arrays.toString(prueba1));
