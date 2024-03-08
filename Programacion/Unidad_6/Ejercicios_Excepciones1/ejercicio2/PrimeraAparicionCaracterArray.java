@@ -1,13 +1,8 @@
-package Programacion;
+package Programacion.Unidad_6.Ejercicios_Excepciones1.ejercicio2;
 
 import Programacion.utils.InputOutputArrayUtils;
 
-/**
- *
- * @author juasanlop2
- */
-public class Pruebas {
-
+public class PrimeraAparicionCaracterArray {
 
     public static void main(String[] args) {
 
