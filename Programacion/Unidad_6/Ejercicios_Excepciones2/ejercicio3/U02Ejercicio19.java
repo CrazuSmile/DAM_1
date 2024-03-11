@@ -1,5 +1,7 @@
 package ejercicio3;
 
+import java.util.*;
+
 public class U02Ejercicio19 {
     public static void main(String[] args) {
         float precioLitro1, pagado1, km1;
@@ -23,20 +25,34 @@ public class U02Ejercicio19 {
 
         litros1 = pagado1 / precioLitro1;
         litros2 = pagado2 / precioLitro2;
-        if ((km3 - km1) > 0) {
-            consumo100 = 100 * (litros1 + litros2) / (km3 - km1);
-        } else {
-            throw new RuntimeException("No se puede dividir entre cero y no puede ser negativo");
-        }
+        /*
+         * if ((km3 - km1) > 0) {
+         * consumo100 = 100 * (litros1 + litros2) / (km3 - km1);
+         * } else {
+         * throw new
+         * RuntimeException("No se puede dividir entre cero y no puede ser negativo");
+         * }
+         */
 
-        if ((km3 - km1) > 0) {
+        try {
             precioKm = (pagado1 + pagado2) / (km3 - km1);
-        } else {
-            throw new RuntimeException("No se puede dividir entre cero y no puede ser negativo");
+            consumo100 = 100 * (litros1 + litros2) / (km3 - km1);
+            System.out.println("\nConsumo por cada 100Km: " + consumo100 + "L");
+            System.out.println("Coste por Km: " + precioKm + "€");
+
+        } catch (ArithmeticException e) {
+            // TODO: handle exception
+            System.out.println("No se puede dividir entre cero y no puede ser negativo");
         }
 
-        System.out.println("\nConsumo por cada 100Km: " + consumo100 + "L");
-        System.out.println("Coste por Km: " + precioKm + "€");
+        /*
+         * if ((km3 - km1) > 0) {
+         * precioKm = (pagado1 + pagado2) / (km3 - km1);
+         * } else {
+         * throw new
+         * RuntimeException("No se puede dividir entre cero y no puede ser negativo");
+         * }
+         */
 
     }
 }
