@@ -8,20 +8,20 @@ public class ConcatenarVectoresExcepcion {
         int[] array1 = InputOutputArrayUtils.inicializarArrayTeclado();
         int[] array2 = InputOutputArrayUtils.inicializarArrayTeclado();
 
+        int[] resultado;
         try {
-            int[] resultado = concatenar(array1, array2);
-            InputOutputArrayUtils.imprimirArray(resultado);
-
+            resultado = concatenar(array1, array2);
         } catch (IllegalArgumentException e) {
             System.out.println("Error: " + e.getMessage());
+            return;
         }
+        
+        InputOutputArrayUtils.imprimirArray(resultado);
     }
 
     private static int[] concatenar(int[] a, int[] b) {
 
-        if (a == null || b == null || a.length == 0 || b.length == 0) {
-            throw new IllegalArgumentException("Los vectores no pueden ser nulos o de tamaño 0");
-        }
+        comprobar(a, b);
 
         int[] resultado = new int[a.length + b.length];
 
@@ -34,5 +34,11 @@ public class ConcatenarVectoresExcepcion {
         }
         return resultado;
 
+    }
+
+    private static void comprobar(int[] a, int[] b) {
+        if (a == null || b == null || a.length == 0 || b.length == 0) {
+            throw new IllegalArgumentException("Los vectores no pueden ser nulos o de tamaño 0");
+        }
     }
 }
