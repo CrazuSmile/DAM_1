@@ -128,13 +128,15 @@ public class Triangulo {
      * @param punto2 Segundo punto del triángulo
      * @param punto3 Tercer punto del triángulo
      */
-    private Triangulo(Punto punto1, Punto punto2, Punto punto3) {
-
-        this.punto1 = punto1;
-        this.punto2 = punto2;
-        this.punto3 = punto3;
-
-    }
+    /*
+     * private Triangulo(Punto punto1, Punto punto2, Punto punto3) {
+     * 
+     * this.punto1 = punto1;
+     * this.punto2 = punto2;
+     * this.punto3 = punto3;
+     * 
+     * }
+     */
 
     public Triangulo(float coordXP1, float coordYP1, float coordXP2, float coordYP2, float coordXP3, float coordYP3) {
         this.punto1 = new Punto(coordXP1, coordYP1);
