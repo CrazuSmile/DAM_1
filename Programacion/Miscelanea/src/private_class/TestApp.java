@@ -21,9 +21,9 @@ import java.util.Scanner;
  */
 public class TestApp {
 
-    public static void main(String[] args) {
+    private static final Scanner TECLADO = new Scanner(System.in);
 
-        Scanner input = new Scanner(System.in);
+    public static void main(String[] args) {
 
         Triangulo tr = new Triangulo(0, 0, 0, 0, 0, 0);
 
@@ -34,19 +34,19 @@ public class TestApp {
         System.out.println(tr.perimetro());
 
         System.out.print("Indique un desplazamiento en el eje de coordenadas horizontal: ");
-        float despX = input.nextFloat();
-        input.nextLine();
+        float despX = TECLADO.nextFloat();
+        TECLADO.nextLine();
 
         System.out.print("Indique un desplazamiento en el eje de coordenadas vertical: ");
-        float despY = input.nextFloat();
-        input.nextLine();
+        float despY = TECLADO.nextFloat();
+        TECLADO.nextLine();
 
         tr.trasladar(despX, despY);
         System.out.println("Triángulo tras el traslado");
         System.out.println(tr);
 
         System.out.print("Indique ahora un factor de escala para el triangulo: ");
-        double factorEscalar = input.nextDouble();
+        double factorEscalar = TECLADO.nextDouble();
 
         tr.escalar(factorEscalar);
         System.out.println("Triángulo tras el escalado");
