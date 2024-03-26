@@ -1,3 +1,7 @@
 {
-    "git-blame.gitWebUrl": ""
+    "git-blame.gitWebUrl": "",
+    "java.project.sourcePaths": [
+        "Programacion/Miscelanea/src",
+        "Programacion/Unidad_7/src"
+    ]
 }
