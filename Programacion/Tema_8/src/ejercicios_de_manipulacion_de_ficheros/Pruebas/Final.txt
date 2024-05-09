@@ -1,0 +1,2 @@
+Prueba 1, veamos si esto funciona/Prueba 1, veamos si esto funciona
+Prueba 2, comprobemos que funciona el buffer reader/Prueba 2, comprobemos que funciona el buffer reader
