@@ -3,16 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jsanm/OneDrive%20-%20Conselleria%20d'Educació/IES%20Serpis/1DAMS_Programación/TEMA10%20-%20ACCESO%20A%20DATOS/TrainingAccesoADatos/src/training/data_access/Constants.java</file>
-            <file>file:/C:/Users/jsanm/OneDrive%20-%20Conselleria%20d'Educació/IES%20Serpis/1DAMS_Programación/TEMA10%20-%20ACCESO%20A%20DATOS/TrainingAccesoADatos/src/training/TrainingApp.java</file>
-            <file>file:/C:/Users/jsanm/OneDrive%20-%20Conselleria%20d'Educació/IES%20Serpis/1DAMS_Programación/TEMA10%20-%20ACCESO%20A%20DATOS/TrainingAccesoADatos/src/training/data_access/LanguageDataAccessObject.java</file>
-            <file>file:/C:/Users/jsanm/OneDrive%20-%20Conselleria%20d'Educació/IES%20Serpis/1DAMS_Programación/TEMA10%20-%20ACCESO%20A%20DATOS/TrainingAccesoADatos/src/training/objects/City.java</file>
-            <file>file:/C:/Users/jsanm/OneDrive%20-%20Conselleria%20d'Educació/IES%20Serpis/1DAMS_Programación/TEMA10%20-%20ACCESO%20A%20DATOS/TrainingAccesoADatos/src/training/data_access/FilmDataAccessObject.java</file>
-            <file>file:/C:/Users/jsanm/OneDrive%20-%20Conselleria%20d'Educació/IES%20Serpis/1DAMS_Programación/TEMA10%20-%20ACCESO%20A%20DATOS/TrainingAccesoADatos/src/training/objects/Film.java</file>
-            <file>file:/C:/Users/jsanm/OneDrive%20-%20Conselleria%20d'Educació/IES%20Serpis/1DAMS_Programación/TEMA10%20-%20ACCESO%20A%20DATOS/TrainingAccesoADatos/src/training/objects/Language.java</file>
-            <file>file:/C:/Users/jsanm/OneDrive%20-%20Conselleria%20d'Educació/IES%20Serpis/1DAMS_Programación/TEMA10%20-%20ACCESO%20A%20DATOS/TrainingAccesoADatos/src/training/data_access/CityDataAccessObject.java</file>
-            <file>file:/C:/Users/jsanm/OneDrive%20-%20Conselleria%20d'Educació/IES%20Serpis/1DAMS_Programación/TEMA10%20-%20ACCESO%20A%20DATOS/TrainingAccesoADatos/src/training/data_access/DataAccessManager.java</file>
-            <file>file:/C:/Users/jsanm/OneDrive%20-%20Conselleria%20d'Educació/IES%20Serpis/1DAMS_Programación/TEMA10%20-%20ACCESO%20A%20DATOS/TrainingAccesoADatos/src/training/data_access/DataAccessObject.java</file>
+            <file>file:/C:/Users/jojos/Documents/GitHub/DAM_1/Programacion/TrainingAccesoADatos/resources/db.properties</file>
+            <file>file:/C:/Users/jojos/Documents/GitHub/DAM_1/Programacion/TrainingAccesoADatos/src/training/data_access/DataAccessManager.java</file>
+            <file>file:/C:/Users/jojos/Documents/GitHub/DAM_1/Programacion/TrainingAccesoADatos/src/training/data_access/CityDAO.java</file>
+            <file>file:/C:/Users/jojos/Documents/GitHub/DAM_1/Programacion/TrainingAccesoADatos/src/training/objects/City.java</file>
         </group>
     </open-files>
 </project-private>
