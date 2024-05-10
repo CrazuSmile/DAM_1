@@ -200,6 +200,10 @@ public class DataAccessManager implements AutoCloseable{
     /**
      * Wrapper de la función {@link FilmDAO#loadFilmsByLengthRange(short, short) }. Dirigirse al JAVADOC
      * de dicha función para más información.
+     * @param fromYear
+     * @param toYear
+     * @return 
+     * @throws java.sql.SQLException
      * @see FilmDAO#loadFilmsByLengthRange(short, short) 
      */
     public List<Film> loadFilmsByLengthRange(short fromYear, short toYear) throws SQLException {
@@ -210,6 +214,9 @@ public class DataAccessManager implements AutoCloseable{
     /**
      * Wrapper de la función {@link FilmDAO#loadFilmByTitle(java.lang.String)}. Dirigirse al JAVADOC
      * de dicha función para más información.
+     * @param title
+     * @return 
+     * @throws java.sql.SQLException
      * @see FilmDAO#loadFilmByTitle(java.lang.String) 
      */
     public Film loadFilmByTitle(String title) throws SQLException{
@@ -222,6 +229,8 @@ public class DataAccessManager implements AutoCloseable{
     /**
      * Wrapper de la función {@link FilmDAO#updateFilm(training.objects.Film) }. Dirigirse al JAVADOC
      * de dicha función para más información.
+     * @param filmToUpdate
+     * @throws java.sql.SQLException
      * @see FilmDAO#updateFilm(training.objects.Film) 
      */
     public void updateFilm(Film filmToUpdate) throws SQLException{
