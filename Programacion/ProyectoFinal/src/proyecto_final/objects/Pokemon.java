@@ -9,6 +9,7 @@ package proyecto_final.objects;
  * @author jojos
  */
 public class Pokemon {
+
     private int pokID;
     private String pokName;
     private int pokHeight;
@@ -17,18 +18,19 @@ public class Pokemon {
 
     public Pokemon(int pokID, String pokName, int pokHeight, int pokWeight, int pokBaseExpercience) {
         this.setPokID(pokID);
-        this.setPokBaseExperience(pokBaseExperience);
-        this.setPokHeight(pokHeight);
         this.setPokName(pokName);
+        this.setPokHeight(pokHeight);
         this.setPokWeight(pokWeight);
+        this.setPokBaseExperience(pokBaseExperience);
+
     }
 
     public final void setPokID(int pokID) {
-        if (pokID <= 0)
-            throw new IllegalArgumentException("No se adite valor negativo.");
+        /*      if (pokID == 0)
+            throw new IllegalArgumentException("No se adite valor negativo.");*/
         this.pokID = pokID;
     }
-    
+
     public final int getPokID() {
         return pokID;
     }
@@ -38,8 +40,8 @@ public class Pokemon {
     }
 
     public final void setPokName(String pokName) {
-        if (pokName == null)
-            throw new IllegalArgumentException("No se adite un valor nulo.");
+        /* if (pokName == null)
+            throw new IllegalArgumentException("No se adite un valor nulo.");*/
         this.pokName = pokName;
     }
 
@@ -48,8 +50,8 @@ public class Pokemon {
     }
 
     public final void setPokHeight(int pokHeight) {
-        if (pokHeight <= 0)
-            throw new IllegalArgumentException("No se adite valor negativo.");
+        //  if (pokHeight == 0)
+        //     throw new IllegalArgumentException("No se adite valor negativo.");
         this.pokHeight = pokHeight;
     }
 
@@ -58,8 +60,8 @@ public class Pokemon {
     }
 
     public final void setPokWeight(int pokWeight) {
-        if (pokWeight <= 0)
-            throw new IllegalArgumentException("No se adite valor negativo.");
+        // if (pokWeight == 0)
+        //    throw new IllegalArgumentException("No se adite valor negativo.");
         this.pokWeight = pokWeight;
     }
 
@@ -68,8 +70,13 @@ public class Pokemon {
     }
 
     public final void setPokBaseExperience(int pokBaseExperience) {
-        if (pokBaseExperience <= 0)
-            throw new IllegalArgumentException("No se adite valor negativo.");
+        // if (pokBaseExperience == 0)
+        //     throw new IllegalArgumentException("No se adite valor negativo.");
         this.pokBaseExperience = pokBaseExperience;
+    }
+    
+    @Override
+    public String toString(){
+        return this.getPokName();
     }
 }

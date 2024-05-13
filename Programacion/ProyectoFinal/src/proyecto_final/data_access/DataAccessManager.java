@@ -44,7 +44,7 @@ public class DataAccessManager implements AutoCloseable{
             singleton = new DataAccessManager();
             try{
                 singleton.cnx = createConnection();
-                singleton.cityDAO = new PokemonDOA(singleton.cnx);
+                singleton.pokemonDOA = new PokemonDOA(singleton.cnx);
             }
             catch(Exception  e){
                 singleton = null;
@@ -171,11 +171,13 @@ public class DataAccessManager implements AutoCloseable{
     /**
      * Wrapper de la función {@link CityDAO#loadAllCities()}. Dirigirse al JAVADOC
      * de dicha función para más información.
+     * @return 
+     * @throws java.sql.SQLException
      * @see PokemonDOA#loadAllCities()
      */
     public List<Pokemon> loadAllPokemon() throws SQLException{
         
-        return this.PokemonDOA.loadAllPokemon();
+        return this.pokemonDOA.loadAllPokemon();
     }
 
     /**
@@ -187,7 +189,7 @@ public class DataAccessManager implements AutoCloseable{
         if(content==null || content.length()==0)
             throw new IllegalArgumentException("Debe indicar el filtro de búsqueda");
         
-        return this.PokemonDOA.loadPokemonContaining(content);
+        return this.pokemonDOA.loadPokemonContaining(content);
     }
     
     /**
