@@ -15,9 +15,9 @@ import proyecto_final.objects.Pokemon;
  *
  * @author jojos
  */
-public class PokemonDOA extends DataAccessObject{
+public class PokemonDAO extends DataAccessObject{
     
-    PokemonDOA(Connection cnt){
+    PokemonDAO(Connection cnt){
         super(cnt);
     }
     

@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Properties;
 
 import static proyecto_final.data_access.constants.Constants.*;
+import proyecto_final.objects.Ability;
 import proyecto_final.objects.Pokemon;
 
 
@@ -44,7 +45,8 @@ public class DataAccessManager implements AutoCloseable{
             singleton = new DataAccessManager();
             try{
                 singleton.cnx = createConnection();
-                singleton.pokemonDOA = new PokemonDOA(singleton.cnx);
+                singleton.pokemonDAO = new PokemonDAO(singleton.cnx);
+                singleton.abilityDAO = new AbilityDAO(singleton.cnx);
             }
             catch(Exception  e){
                 singleton = null;
@@ -108,7 +110,9 @@ public class DataAccessManager implements AutoCloseable{
     private Connection cnx; 
     
     //objeto de acceso a datos para sentencias de la tabla <code>city</code>
-    private PokemonDOA pokemonDOA;
+    private PokemonDAO pokemonDAO;
+    
+    private AbilityDAO abilityDAO;
 
     //objeto de acceso a datos para sentencias de la tabla <code>film</code>
     
@@ -120,7 +124,8 @@ public class DataAccessManager implements AutoCloseable{
             if(cnx!=null && !cnx.isClosed()){
                 cnx.close();
                 cnx = null;
-                pokemonDOA = null;
+                pokemonDAO = null;
+                abilityDAO = null;
             }
         }catch(SQLException sqe){
             System.out.println("Error al cerrar la conexión a datos. " + sqe.getMessage());
@@ -173,63 +178,35 @@ public class DataAccessManager implements AutoCloseable{
      * de dicha función para más información.
      * @return 
      * @throws java.sql.SQLException
-     * @see PokemonDOA#loadAllCities()
+     * @see PokemonDAO#loadAllPokemon()
      */
     public List<Pokemon> loadAllPokemon() throws SQLException{
         
-        return this.pokemonDOA.loadAllPokemon();
+        return this.pokemonDAO.loadAllPokemon();
     }
 
     /**
      * Wrapper de la función {@link CityDAO#loadCitiesContaining(java.lang.String)}. Dirigirse al JAVADOC
      * de dicha función para más información.
-     * @see PokemonDOA#loadCitiesContaining(java.lang.String) 
+     * @param content
+     * @return 
+     * @throws java.sql.SQLException
+     * @see PokemonDAO#loadPokemonContaining(java.lang.String) 
      */
     public List<Pokemon> loadPokemonContaining(String content) throws SQLException {
         if(content==null || content.length()==0)
             throw new IllegalArgumentException("Debe indicar el filtro de búsqueda");
         
-        return this.pokemonDOA.loadPokemonContaining(content);
+        return this.pokemonDAO.loadPokemonContaining(content);
     }
     
     /**
-     * Wrapper de la función {@link FilmDAO#loadFilmsByLengthRange(short, short) }. Dirigirse al JAVADOC
-     * de dicha función para más información.
-     * @param fromYear
-     * @param toYear
-     * @return 
-     * @throws java.sql.SQLException
-     * @see FilmDAO#loadFilmsByLengthRange(short, short) 
+     *
+     * @return
+     * @throws SQLException
      */
-    
-    
-    /**
-     * Wrapper de la función {@link FilmDAO#loadFilmByTitle(java.lang.String)}. Dirigirse al JAVADOC
-     * de dicha función para más información.
-     * @param title
-     * @return 
-     * @throws java.sql.SQLException
-     * @see FilmDAO#loadFilmByTitle(java.lang.String) 
-     */
-   
-    
-    /**
-     * Wrapper de la función {@link FilmDAO#updateFilm(training.objects.Film) }. Dirigirse al JAVADOC
-     * de dicha función para más información.
-     * @param filmToUpdate
-     * @throws java.sql.SQLException
-     * @see FilmDAO#updateFilm(training.objects.Film) 
-     */
-   
-    
-    
-    
-    
-
-   
-
-    
-
-   
+    public List<Ability> loadAllAbiliteis() throws SQLException{
+        return this.abilityDAO.loadAllAbilities();
+    }
     
 }

@@ -4,13 +4,14 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
 import proyecto_final.data_access.DataAccessManager;
+import proyecto_final.objects.Ability;
 import proyecto_final.objects.Pokemon;
 
 public class AccesApp {
     private static final Scanner SCANNER = new Scanner(System.in);
     
     private enum MenuOption{
-        QUERY_POKEMONS, QUERY_POKEMONS_BY_NAME, BYE
+        QUERY_POKEMONS, QUERY_POKEMONS_BY_NAME,QUERY_ABILITIES, BYE
     }
     
     public static void main(String[] args) {
@@ -29,6 +30,9 @@ public class AccesApp {
                     case QUERY_POKEMONS_BY_NAME:
                         searchPokemonByName(dam);
                         break;
+                    case QUERY_ABILITIES:
+                        loadAllAbilities(dam);
+                        break;
                     case BYE:
                         
                 }
@@ -46,7 +50,8 @@ public class AccesApp {
                 .append("\n\n\nElija una opción:\n")
                 .append("\t1)Consultar todos los pokemons\n")
                 .append("\t2)Consultar los pokemons filtradas por LIKE\n")
-                .append("\t3)Salir\n")
+                .append("\t3)Consultar todas las abilidades\n")
+                .append("\t4)Salir\n")
                 .append("Opción: ");
         System.out.print(sb.toString());
     }
@@ -69,8 +74,13 @@ public class AccesApp {
     
     private static void searchPokemonByName(DataAccessManager dam) throws SQLException{
         String name = requestPokemonNameLike();
-        List<Pokemon> citiesFilteredByInitialLetter = dam.loadPokemonContaining(name);
-        printPokemons(citiesFilteredByInitialLetter);
+        List<Pokemon> pokemonFilterdByName = dam.loadPokemonContaining(name);
+        printPokemons(pokemonFilterdByName);
+    }
+    private static void loadAllAbilities(DataAccessManager dam) throws SQLException{
+        List<Ability> allAbilities = dam.loadAllAbiliteis();
+            printAbilities(allAbilities);
+        
     }
     
     private static void printPokemons(List<Pokemon> pokemons) {
@@ -81,6 +91,18 @@ public class AccesApp {
         
         for(Pokemon pokemon:pokemons){
             System.out.println("\t"+pokemon);
+        }
+        System.out.println();
+    }
+    
+    private static void printAbilities(List<Ability> abilities){
+        if(abilities==null || abilities.isEmpty()){
+            System.out.println("No hay registros...");
+            return;
+        }
+        
+        for(Ability ability:abilities){
+            System.out.println("\t"+ability);
         }
         System.out.println();
     }
