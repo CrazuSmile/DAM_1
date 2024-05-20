@@ -151,7 +151,7 @@ public class DataAccessManager implements AutoCloseable{
         try{
             Class.forName(MYSQL_DB_DRIVER__CLASS_NAME);
             Connection cnt =  DriverManager.getConnection(dataBaseURL, dataBaseUser, dataBasePwd);
-            cnt.setAutoCommit(true);
+            cnt.setAutoCommit(false);
             return cnt;
         }
         catch(ClassNotFoundException cnfe){
@@ -207,6 +207,13 @@ public class DataAccessManager implements AutoCloseable{
      */
     public List<Ability> loadAllAbiliteis() throws SQLException{
         return this.abilityDAO.loadAllAbilities();
+    }
+    
+    public List<Ability> insertAbilities(String abilName) throws SQLException{
+        if (abilName == null || abilName.length() == 0)
+            throw new IllegalArgumentException("La abilidad no puede ser nula.");
+        
+        return this.abilityDAO.insertAbility(abilName);
     }
     
 }

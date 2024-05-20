@@ -11,7 +11,7 @@ public class AccesApp {
     private static final Scanner SCANNER = new Scanner(System.in);
     
     private enum MenuOption{
-        QUERY_POKEMONS, QUERY_POKEMONS_BY_NAME,QUERY_ABILITIES, BYE
+        QUERY_POKEMONS, QUERY_POKEMONS_BY_NAME, QUERY_ABILITIES, INSERT_ABILITY, BYE
     }
     
     public static void main(String[] args) {
@@ -33,6 +33,9 @@ public class AccesApp {
                     case QUERY_ABILITIES:
                         loadAllAbilities(dam);
                         break;
+                    case INSERT_ABILITY:
+                        insertAbility(dam);
+                        break;
                     case BYE:
                         
                 }
@@ -51,7 +54,8 @@ public class AccesApp {
                 .append("\t1)Consultar todos los pokemons\n")
                 .append("\t2)Consultar los pokemons filtradas por LIKE\n")
                 .append("\t3)Consultar todas las abilidades\n")
-                .append("\t4)Salir\n")
+                .append("\t4)Añadir una abilidad nueva\n")
+                .append("\t5)Salir\n")
                 .append("Opción: ");
         System.out.print(sb.toString());
     }
@@ -81,6 +85,13 @@ public class AccesApp {
         List<Ability> allAbilities = dam.loadAllAbiliteis();
             printAbilities(allAbilities);
         
+    }
+    
+    private static void insertAbility(DataAccessManager dam) throws SQLException{
+        String nameAbil = insertAbilityName();
+        List<Ability> insertAbility = dam.insertAbilities(nameAbil);
+                
+            printAbilities(insertAbility);
     }
     
     private static void printPokemons(List<Pokemon> pokemons) {
@@ -121,6 +132,11 @@ public class AccesApp {
     
     private static String requestPokemonNameLike(){
         System.out.print("Escriba un nombre a filtrar (recuerde indicar con el caracter % el filtro de búsqueda): ");
+        return readNotEmptyString();
+        
+    }
+     private static String insertAbilityName(){
+        System.out.print("Escribe el nombre de la nueva abilidad: ");
         return readNotEmptyString();
         
     }

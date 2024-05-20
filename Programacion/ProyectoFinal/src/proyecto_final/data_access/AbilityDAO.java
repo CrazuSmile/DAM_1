@@ -36,6 +36,28 @@ public class AbilityDAO extends DataAccessObject {
         return abilities;
     }
     
+    protected List<Ability> insertAbility(String abilName) throws SQLException{
+        PreparedStatement stmt = cnt.prepareStatement("INSERT INTO abilities(abil_name) VALUES (?)");
+        stmt.setString(1, abilName);
+        
+        int num = stmt.executeUpdate();
+        
+       if(num != 1){
+          cnt.rollback();
+           throw new IllegalStateException("Ha habido un error al auctualizar la tabla.");
+       }
+        
+        List <Ability> abilities = new ArrayList<>();
+        stmt = cnt.prepareStatement("SELECT * FROM abilities WHERE abil_id = (SELECT MAX(abil_id) FROM abilities)");
+        ResultSet result = stmt.executeQuery();
+        
+        while(result.next()){
+            abilities.add(readAbilitiesFromResultSet(result));
+        }
+        
+        return abilities;
+    }
+    
     private static Ability readAbilitiesFromResultSet(ResultSet rs) throws SQLException{
         int abilId = rs.getInt(AbilitiesTablesColumn.COLUMN_NAME__ABIL_ID);
         String abilName = rs.getString(AbilitiesTablesColumn.COLUMN_NAME__ABIL_NAME);
