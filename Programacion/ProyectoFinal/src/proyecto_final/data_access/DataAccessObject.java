@@ -10,16 +10,18 @@ import java.sql.SQLException;
 
 /**
  * Clase genérica de acceso a datos
+ *
  * @author jsanm
  */
 abstract class DataAccessObject {
-    
+
     protected Connection cnt;
-    
-    DataAccessObject(Connection cnt){
-        if(cnt==null)
+
+    DataAccessObject(Connection cnt) {
+        if (cnt == null) {
             throw new IllegalArgumentException("Conexión obligatoria");
+        }
         this.cnt = cnt;
     }
-    
+
 }

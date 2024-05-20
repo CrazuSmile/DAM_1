@@ -74,9 +74,9 @@ public class Pokemon {
         //     throw new IllegalArgumentException("No se adite valor negativo.");
         this.pokBaseExperience = pokBaseExperience;
     }
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         return this.getPokName();
     }
 }
