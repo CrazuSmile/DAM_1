@@ -37,6 +37,7 @@ public class AccesApp {
                     case INSERT_ABILITY:
                         insertAbility(dam);
                         break;
+                    case DELETE_ABILITY:
                     case BYE:
 
                 }
@@ -60,7 +61,7 @@ public class AccesApp {
                 .append("\t6)Salir\n")
                 .append("Opción: ");
         System.out.print(sb.toString());
-    }
+}
 
     private static MenuOption readChoice() {
         try {
