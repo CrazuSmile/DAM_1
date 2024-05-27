@@ -119,6 +119,7 @@ public class DataAccessManager implements AutoCloseable {
     private PokemonDAO pokemonDAO;
 
     private AbilityDAO abilityDAO;
+    
 
     //objeto de acceso a datos para sentencias de la tabla <code>film</code>
     //objeto de acceso a datos para sentencias de la tabla <code>language</code>
@@ -229,6 +230,12 @@ public class DataAccessManager implements AutoCloseable {
             throw new IllegalArgumentException("Debe exisitir la abilidad para poder eliminarla");
         }
         this.abilityDAO.deleteAbility(abilID);
+    }
+    
+    
+    
+    public List<Pokemon> loadAllPokemonWithAbilities() throws SQLException{
+        return this.pokemonDAO.loadPokemonsWithAbilities();
     }
 
 }

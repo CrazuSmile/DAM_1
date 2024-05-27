@@ -9,7 +9,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import proyecto_final.objects.Ability;
 import proyecto_final.objects.Pokemon;
 
 /**
@@ -48,6 +51,27 @@ public class PokemonDAO extends DataAccessObject {
         return pokemons;
     }
 
+    protected List<Pokemon> loadPokemonsWithAbilities() throws SQLException {
+        Map<Integer, Pokemon> pokemonMap = new HashMap<>();
+
+        String query = "SELECT * FROM pokemon NATURAL JOIN pokemon_abilities NATURAL JOIN abilities ORDER BY pok_id";
+        try (PreparedStatement stmt = cnt.prepareStatement(query);
+             ResultSet result = stmt.executeQuery()) {
+
+            while (result.next()) {
+                int pokId = result.getInt("pok_id");
+                Pokemon pokemon = pokemonMap.getOrDefault(pokId, readPokemonFromResultSet(result));
+                Ability ability = readAbilityFromResultSet(result);
+                pokemon.addAbility(ability);
+                pokemonMap.putIfAbsent(pokId, pokemon);
+            }
+        } catch (SQLException e) {
+            throw e;
+        }
+
+        return new ArrayList<>(pokemonMap.values());
+    }
+
     private static Pokemon readPokemonFromResultSet(ResultSet rs) throws SQLException {
         int pokID = rs.getInt(PokemonTablesColumn.COLUM_NAME__POK_ID);
         String pokName = rs.getString(PokemonTablesColumn.COLUM_NAME__POK_NAME);
@@ -56,6 +80,12 @@ public class PokemonDAO extends DataAccessObject {
         int pokBaseExperience = rs.getInt(PokemonTablesColumn.COLUM_NAME__POK_BASE_EXPERCIENCE);
         Pokemon pokemon = new Pokemon(pokID, pokName, pokHeight, pokWeight, pokBaseExperience);
         return pokemon;
+    }
+
+    private Ability readAbilityFromResultSet(ResultSet result) throws SQLException {
+        int abilityId = result.getInt("abil_id");
+        String abilityName = result.getString("abil_name");
+        return new Ability(abilityId, abilityName);
     }
 
     private class PokemonTablesColumn {

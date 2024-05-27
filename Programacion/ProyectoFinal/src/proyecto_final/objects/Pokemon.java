@@ -4,6 +4,9 @@
  */
 package proyecto_final.objects;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author jojos
@@ -15,6 +18,7 @@ public class Pokemon {
     private int pokHeight;
     private int pokWeight;
     private int pokBaseExperience;
+    private List<Ability> abilities;
 
     public Pokemon(int pokID, String pokName, int pokHeight, int pokWeight, int pokBaseExpercience) {
         this.setPokID(pokID);
@@ -22,8 +26,19 @@ public class Pokemon {
         this.setPokHeight(pokHeight);
         this.setPokWeight(pokWeight);
         this.setPokBaseExperience(pokBaseExperience);
+        this.abilities = new ArrayList<>();
 
     }
+    
+    public void addAbility(Ability ability) {
+        this.abilities.add(ability);
+    }
+    
+    public final List<Ability> getAbility(){
+        return abilities;
+
+    }
+
 
     public final void setPokID(int pokID) {
         /*      if (pokID == 0)
