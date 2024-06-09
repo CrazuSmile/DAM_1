@@ -1,0 +1,97 @@
+@startuml
+abstract class proyecto_final.data_access.DataAccessObject
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class java.awt.event.WindowEvent
+class java.awt.event.WindowListener
+class java.io.File
+class java.io.FileReader
+class java.io.IOException
+class java.sql.Connection
+class java.sql.DriverManager
+class java.sql.PreparedStatement
+class java.sql.ResultSet
+class java.sql.SQLException
+class java.util.ArrayList
+class java.util.HashMap
+class java.util.List
+class java.util.Map
+class java.util.Properties
+class java.util.logging.Level
+class java.util.logging.Logger
+class javax.swing.JFrame
+class javax.swing.event.ListSelectionEvent
+class javax.swing.event.ListSelectionListener
+class javax.swing.table.DefaultTableModel
+class proyecto_final.AccessUIApp
+class proyecto_final.data_access.AbilityDAO
+class proyecto_final.data_access.DataAccessManager
+class proyecto_final.data_access.PokemonDAO
+class proyecto_final.data_access.constants.Constants
+class proyecto_final.objects.Ability
+class proyecto_final.objects.Pokemon
+class proyecto_final.ui.NotEditableTableModel
+class proyecto_final.ui.UserInterfaceFrame
+interface java.lang.AutoCloseable
+proyecto_final.data_access.DataAccessObject ..> java.sql.Connection
+proyecto_final.data_access.DataAccessObject ..> java.sql.SQLException
+proyecto_final.AccessUIApp ..> java.lang.Override
+proyecto_final.AccessUIApp ..> java.awt.event.WindowEvent
+proyecto_final.AccessUIApp ..> java.awt.event.WindowListener
+proyecto_final.AccessUIApp ..> java.sql.SQLException
+proyecto_final.AccessUIApp ..> proyecto_final.data_access.DataAccessManager
+proyecto_final.AccessUIApp ..> proyecto_final.ui.UserInterfaceFrame
+proyecto_final.data_access.AbilityDAO --|> proyecto_final.data_access.DataAccessObject
+proyecto_final.data_access.AbilityDAO ..> java.sql.Connection
+proyecto_final.data_access.AbilityDAO ..> java.sql.PreparedStatement
+proyecto_final.data_access.AbilityDAO ..> java.sql.ResultSet
+proyecto_final.data_access.AbilityDAO ..> java.sql.SQLException
+proyecto_final.data_access.AbilityDAO ..> java.util.ArrayList
+proyecto_final.data_access.AbilityDAO ..> java.util.List
+proyecto_final.data_access.AbilityDAO ..> proyecto_final.objects.Ability
+proyecto_final.data_access.DataAccessManager ..> java.lang.Override
+proyecto_final.data_access.DataAccessManager ..> java.io.FileReader
+proyecto_final.data_access.DataAccessManager ..> java.io.IOException
+proyecto_final.data_access.DataAccessManager ..> java.sql.Connection
+proyecto_final.data_access.DataAccessManager ..> java.sql.DriverManager
+proyecto_final.data_access.DataAccessManager ..> java.sql.SQLException
+proyecto_final.data_access.DataAccessManager ..> java.util.List
+proyecto_final.data_access.DataAccessManager ..> java.util.Properties
+proyecto_final.data_access.DataAccessManager ..> proyecto_final.data_access.constants.Constants
+proyecto_final.data_access.DataAccessManager ..> proyecto_final.objects.Ability
+proyecto_final.data_access.DataAccessManager ..> proyecto_final.objects.Pokemon
+proyecto_final.data_access.DataAccessManager --|> java.lang.AutoCloseable
+proyecto_final.data_access.PokemonDAO --|> proyecto_final.data_access.DataAccessObject
+proyecto_final.data_access.PokemonDAO ..> java.sql.Connection
+proyecto_final.data_access.PokemonDAO ..> java.sql.PreparedStatement
+proyecto_final.data_access.PokemonDAO ..> java.sql.ResultSet
+proyecto_final.data_access.PokemonDAO ..> java.sql.SQLException
+proyecto_final.data_access.PokemonDAO ..> java.util.ArrayList
+proyecto_final.data_access.PokemonDAO ..> java.util.HashMap
+proyecto_final.data_access.PokemonDAO ..> java.util.List
+proyecto_final.data_access.PokemonDAO ..> java.util.Map
+proyecto_final.data_access.PokemonDAO ..> proyecto_final.objects.Ability
+proyecto_final.data_access.PokemonDAO ..> proyecto_final.objects.Pokemon
+proyecto_final.data_access.constants.Constants ..> java.io.File
+proyecto_final.objects.Ability ..> java.lang.Override
+proyecto_final.objects.Pokemon ..> java.lang.Override
+proyecto_final.objects.Pokemon ..> java.util.ArrayList
+proyecto_final.objects.Pokemon ..> java.util.List
+proyecto_final.ui.NotEditableTableModel ..> java.lang.Override
+proyecto_final.ui.NotEditableTableModel --|> javax.swing.table.DefaultTableModel
+proyecto_final.ui.UserInterfaceFrame ..> java.lang.Override
+proyecto_final.ui.UserInterfaceFrame ..> java.lang.SuppressWarnings
+proyecto_final.ui.UserInterfaceFrame ..> java.sql.SQLException
+proyecto_final.ui.UserInterfaceFrame ..> java.util.List
+proyecto_final.ui.UserInterfaceFrame ..> java.util.logging.Level
+proyecto_final.ui.UserInterfaceFrame ..> java.util.logging.Logger
+proyecto_final.ui.UserInterfaceFrame --|> javax.swing.JFrame
+proyecto_final.ui.UserInterfaceFrame ..> javax.swing.event.ListSelectionEvent
+proyecto_final.ui.UserInterfaceFrame ..> javax.swing.event.ListSelectionListener
+proyecto_final.ui.UserInterfaceFrame ..> javax.swing.table.DefaultTableModel
+proyecto_final.ui.UserInterfaceFrame ..> proyecto_final.data_access.AbilityDAO
+proyecto_final.ui.UserInterfaceFrame ..> proyecto_final.data_access.DataAccessManager
+proyecto_final.ui.UserInterfaceFrame ..> proyecto_final.data_access.PokemonDAO
+proyecto_final.ui.UserInterfaceFrame ..> proyecto_final.objects.Ability
+proyecto_final.ui.UserInterfaceFrame ..> proyecto_final.objects.Pokemon
+@enduml

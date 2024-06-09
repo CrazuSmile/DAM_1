@@ -12,10 +12,18 @@ public class Ability {
 
     private int abilID;
     private String abilName;
+    private boolean isHidden;
+    private int slot;
 
     public Ability(int abilID, String abilName) {
         this.setAbilID(abilID);
         this.setAbilName(abilName);
+    }
+
+    public Ability(String abilName, boolean isHidden, int slot) {
+        this.abilName = abilName;
+        this.isHidden = isHidden;
+        this.slot = slot;
     }
 
     public int getAbilID() {
@@ -32,6 +40,22 @@ public class Ability {
 
     public final void setAbilName(String abilName) {
         this.abilName = abilName;
+    }
+
+    public boolean isHidden() {
+        return isHidden;
+    }
+
+    public void setHidden(boolean hidden) {
+        isHidden = hidden;
+    }
+
+    public int getSlot() {
+        return slot;
+    }
+
+    public void setSlot(int slot) {
+        this.slot = slot;
     }
 
     @Override

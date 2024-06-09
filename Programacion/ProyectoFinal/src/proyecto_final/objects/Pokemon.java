@@ -30,6 +30,18 @@ public class Pokemon {
 
     }
     
+    public Pokemon(int pokID, String pokName, ArrayList<Object> arrayList){
+        this.setPokID(pokID);
+        this.setPokName(pokName);
+        this.abilities = new ArrayList<>();
+    }
+
+    public Pokemon(String pokName) {
+        this.pokName = pokName;
+        this.abilities = new ArrayList<>();
+
+    }
+    
     public void addAbility(Ability ability) {
         this.abilities.add(ability);
     }

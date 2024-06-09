@@ -1,3 +1,4 @@
+
 package proyecto_final.data_access;
 
 import java.sql.Connection;
@@ -7,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import proyecto_final.objects.Ability;
+import java.sql.Statement;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -16,6 +18,7 @@ import proyecto_final.objects.Ability;
  *
  * @author jojos
  */
+
 public class AbilityDAO extends DataAccessObject {
 
     public AbilityDAO(Connection cnt) {
@@ -41,42 +44,59 @@ public class AbilityDAO extends DataAccessObject {
 
     /**
      *
-     * @param abilName
+     * @param conn
+     * @param ability
+     *
      * @return
      * @throws SQLException
      */
-    protected List<Ability> insertAbility(String abilName) throws SQLException {
-        PreparedStatement stmt = cnt.prepareStatement("INSERT INTO abilities(abil_name) VALUES (?)");
-        stmt.setString(1, abilName);
+    public int insertAbility(Connection conn, Ability ability) throws SQLException {
+        String sql = "INSERT INTO abilities (abil_name) VALUES (?)";
+        try (PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+            stmt.setString(1, ability.getAbilName());
+            int affectedRows = stmt.executeUpdate();
 
-        int num = stmt.executeUpdate();
+            if (affectedRows == 0) {
+                throw new SQLException("Creating ability failed, no rows affected.");
+            }
 
-        if (num != 1) {
-            cnt.rollback();
-            throw new IllegalStateException("Ha habido un error al auctualizar la tabla.");
+            try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    return generatedKeys.getInt(1);
+                } else {
+                    throw new SQLException("Creating ability failed, no ID obtained.");
+                }
+            }
         }
-
-        List<Ability> abilities = new ArrayList<>();
-        stmt = cnt.prepareStatement("SELECT * FROM abilities WHERE abil_id = (SELECT MAX(abil_id) FROM abilities)");
-        ResultSet result = stmt.executeQuery();
-
-        while (result.next()) {
-            abilities.add(readAbilitiesFromResultSet(result));
-        }
-
-        return abilities;
     }
 
-    protected void deleteAbility(int abilID) throws SQLException {
-        PreparedStatement stmt = cnt.prepareStatement("delete from abilities where abil_id = (?)");
-        stmt.setInt(1, abilID);
-        int num = stmt.executeUpdate();
-
-        if (num != 1) {
-            cnt.rollback();
-            throw new IllegalStateException("Ha habido un error al auctualizar la tabla.");
+    protected void deleteAbility(int abilityId) throws SQLException {
+    // Primero, eliminamos todas las filas relacionadas en la tabla pokemon_abilities
+    String deletePokemonAbilitiesQuery = "DELETE FROM pokemon_abilities WHERE abil_id = ?";
+    try (PreparedStatement stmt = cnt.prepareStatement(deletePokemonAbilitiesQuery)) {
+        stmt.setInt(1, abilityId);
+        stmt.executeUpdate();
+    }
+    
+    // Luego, eliminamos la habilidad de la tabla abilities
+    String deleteAbilityQuery = "DELETE FROM abilities WHERE abil_id = ?";
+    try (PreparedStatement stmt = cnt.prepareStatement(deleteAbilityQuery)) {
+        stmt.setInt(1, abilityId);
+        int rowsAffected = stmt.executeUpdate();
+        if (rowsAffected == 0) {
+            throw new SQLException("No rows were deleted for Ability with ID: " + abilityId);
         }
+    }
+}
 
+
+    public void updateAbilityName(int abilID, String newName) throws SQLException {
+        String sql = "UPDATE abilities SET abil_name = ? WHERE abil_id = ?";
+        try (PreparedStatement stmt = cnt.prepareStatement(sql)) {
+            stmt.setString(1, newName);
+            stmt.setInt(2, abilID);
+            stmt.executeUpdate();
+        }
     }
 
     private static Ability readAbilitiesFromResultSet(ResultSet rs) throws SQLException {
