@@ -25,7 +25,7 @@ public class DataAccessManager implements AutoCloseable {
     private static String dataBaseUser = DEFAULT_DATA_BASE__USER;
     private static String dataBasePwd = DEFAULT_DATA_BASE__PWD;
     private static String dataBaseURL = DEFAULT_DATA_BASE__URL;
-    
+
     private static DataAccessManager singleton;
 
     /**
@@ -33,7 +33,7 @@ public class DataAccessManager implements AutoCloseable {
      * instanciar un único objeto <code>DataAccessManager</code>
      */
     private DataAccessManager() {
-        
+
     }
 
     /**
@@ -54,11 +54,11 @@ public class DataAccessManager implements AutoCloseable {
                 singleton = null;
                 throw new RuntimeException(e);
             }
-            
+
         }
         return singleton;
     }
-    
+
     public Connection getConnection() throws SQLException {
         return DriverManager.getConnection(dataBaseURL, dataBaseUser, dataBasePwd);
     }
@@ -79,7 +79,7 @@ public class DataAccessManager implements AutoCloseable {
      * de IOException, se usan las credenciales por defecto
      */
     private static void loadDataBaseParams() {
-        
+
         Properties pDataBaseConfiguration = null;
         FileReader dbReaderStream = null;
         try {
@@ -88,7 +88,7 @@ public class DataAccessManager implements AutoCloseable {
             pDataBaseConfiguration.load(dbReaderStream);
         } catch (IOException e) {
             System.out.println("Error en la carga de la configuración de la base de datos. Se sigue adelante con la ejecución por defecto. " + e.getMessage());
-            
+
         } finally {
             try {
                 if (dbReaderStream != null) {
@@ -121,7 +121,7 @@ public class DataAccessManager implements AutoCloseable {
 
     //objeto de acceso a datos para sentencias de la tabla <code>city</code>
     private PokemonDAO pokemonDAO;
-    
+
     private AbilityDAO abilityDAO;
 
     //objeto de acceso a datos para sentencias de la tabla <code>film</code>
@@ -155,7 +155,7 @@ public class DataAccessManager implements AutoCloseable {
      * alguna excepción).
      */
     private static Connection createConnection() {
-        
+
         try {
             Class.forName(MYSQL_DB_DRIVER__CLASS_NAME);
             Connection cnt = DriverManager.getConnection(dataBaseURL, dataBaseUser, dataBasePwd);
@@ -176,7 +176,7 @@ public class DataAccessManager implements AutoCloseable {
             System.out.println(sb.toString());
             return null;
         }
-        
+
     }
 
     /**
@@ -186,7 +186,7 @@ public class DataAccessManager implements AutoCloseable {
      * @see PokemonDAO#loadAllPokemon()
      */
     public List<Pokemon> loadAllPokemon() throws SQLException {
-        
+
         return this.pokemonDAO.loadAllPokemon();
     }
 
@@ -201,7 +201,7 @@ public class DataAccessManager implements AutoCloseable {
         if (content == null || content.length() == 0) {
             throw new IllegalArgumentException("Debe indicar el filtro de búsqueda");
         }
-        
+
         return this.pokemonDAO.loadPokemonContaining(content);
     }
 
@@ -213,47 +213,48 @@ public class DataAccessManager implements AutoCloseable {
     public List<Ability> loadAllAbiliteis() throws SQLException {
         return this.abilityDAO.loadAllAbilities();
     }
-    
+
     public void deleteAbility(int abilID) throws SQLException {
         if (abilID <= 0) {
             throw new IllegalArgumentException("Debe exisitir la abilidad para poder eliminarla");
         }
         this.abilityDAO.deleteAbility(abilID);
     }
-    
-    public void deletePokemon(int pokID) throws SQLException {
-        if (pokID <= 0) {
-            throw new IllegalArgumentException("Debe exisitir el pokemon para poder eliminarla");
-        }
-        this.pokemonDAO.deletePokemon(pokID);
-    }
-    
+
     public List<Pokemon> loadAllPokemonWithAbilities() throws SQLException {
         return this.pokemonDAO.loadPokemonsWithAbilities();
     }
-    
+
     public int insertPokemon(Pokemon pokemon) throws SQLException {
         return pokemonDAO.insertPokemon(cnx, pokemon);
     }
-    
+
     public int insertAbility(Ability ability) throws SQLException {
         return abilityDAO.insertAbility(cnx, ability);
     }
-    
+
     public void linkPokemonWithAbility(int pokemonId, int abilityId, boolean isHidden, int slot) throws SQLException {
         pokemonDAO.linkPokemonWithAbility(cnx, pokemonId, abilityId, isHidden, slot);
     }
-    
-    public void updatePokemonName(int pokID, String newName) throws SQLException {
-        pokemonDAO.updatePokemonName(pokID, newName);
+
+    public void updatePokemonName(String oldName, String newName) throws SQLException {
+        PokemonDAO pokemonDAO = new PokemonDAO(cnx);
+        pokemonDAO.updatePokemonName(oldName, newName);
     }
+
+    public void deletePokemonByName(String name) throws SQLException {
+        PokemonDAO pokemonDAO = new PokemonDAO(cnx);
+        pokemonDAO.deletePokemonByName(name);
+    }
+
     
+
     public void updateAbilityName(int abilID, String newName) throws SQLException {
         abilityDAO.updateAbilityName(abilID, newName);
     }
-    
-    public void deletePokemonWithAbilities(int pokID) throws SQLException{
+
+    public void deletePokemonWithAbilities(int pokID) throws SQLException {
         pokemonDAO.deletePokemonWithAbilities(pokID);
     }
-    
+
 }

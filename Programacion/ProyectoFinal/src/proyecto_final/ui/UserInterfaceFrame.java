@@ -65,21 +65,11 @@ public class UserInterfaceFrame extends javax.swing.JFrame {
         loadAll = new javax.swing.JButton();
         loadOne = new javax.swing.JButton();
         insertAbility = new javax.swing.JButton();
-        updateAbility = new javax.swing.JButton();
         delete = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         mostrarPokemon = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
-        abilityNameField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        isHiddenCheckBox = new javax.swing.JCheckBox();
-        slotField = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        updateAbilityIDField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        updatePokemonIDField = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Prueba de Pokedex");
@@ -113,14 +103,6 @@ public class UserInterfaceFrame extends javax.swing.JFrame {
             }
         });
 
-        updateAbility.setText("Actualizar Habilidad");
-        updateAbility.setToolTipText("");
-        updateAbility.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateAbilityActionPerformed(evt);
-            }
-        });
-
         delete.setText("Borrar");
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,107 +125,43 @@ public class UserInterfaceFrame extends javax.swing.JFrame {
 
         jLabel2.setText("Pokedex: Pokemon-Abilidad");
 
-        abilityNameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                abilityNameFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setText("Nombre de la abilidad");
-
-        isHiddenCheckBox.setText("Is Hidden?");
-        isHiddenCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                isHiddenCheckBoxActionPerformed(evt);
-            }
-        });
-
-        slotField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                slotFieldActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Actualizar Pokemon");
+        jButton1.setText("Actualizar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updatePokemonNameActionPerformed(evt);
             }
         });
 
-        updateAbilityIDField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateAbilityIDFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel4.setText("ID");
-
-        jLabel5.setText("Slot");
-
-        jLabel6.setText("ID");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 20, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(updatePokemonIDField, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                    .addComponent(pokemonNameField))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel3)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(isHiddenCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(8, 8, 8))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(updateAbilityIDField, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(abilityNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(slotField, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(168, 168, 168))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(loadAll)
-                        .addGap(18, 18, 18)
-                        .addComponent(insertAbility)
-                        .addGap(18, 18, 18)
-                        .addComponent(loadOne)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(26, 26, 26)
+                            .addComponent(loadAll)
+                            .addGap(18, 18, 18)
+                            .addComponent(insertAbility)
+                            .addGap(18, 18, 18)
+                            .addComponent(loadOne)
+                            .addGap(18, 18, 18)
                             .addComponent(jButton1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(updateAbility)
-                                .addGap(18, 18, 18)
-                                .addComponent(delete))))
+                            .addGap(18, 18, 18)
+                            .addComponent(delete)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(199, 199, 199)
+                        .addGap(158, 158, 158)
+                        .addComponent(pokemonNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(166, 166, 166)
                         .addComponent(jLabel2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,31 +171,17 @@ public class UserInterfaceFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(isHiddenCheckBox)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel6))
-                .addGap(2, 2, 2)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pokemonNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(abilityNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(slotField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(updateAbilityIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(updatePokemonIDField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pokemonNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(loadOne)
                     .addComponent(insertAbility)
-                    .addComponent(updateAbility)
                     .addComponent(delete)
-                    .addComponent(loadAll))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addGap(21, 21, 21))
+                    .addComponent(loadAll)
+                    .addComponent(jButton1))
+                .addGap(50, 50, 50))
         );
 
         pack();
@@ -291,10 +195,6 @@ public class UserInterfaceFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             pokemonNameField.setText("");
-            abilityNameField.setText("");
-            slotField.setText("");
-            updateAbilityIDField.setText("");
-            updatePokemonIDField.setText("");
             loadData();
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaceFrame.class.getName()).log(Level.SEVERE, null, ex);
@@ -308,37 +208,21 @@ public class UserInterfaceFrame extends javax.swing.JFrame {
         insertPokAbil();
         try {
             String pokemonName = pokemonNameField.getText().trim();
-            String abilityName = abilityNameField.getText().trim();
-            boolean isHidden = isHiddenCheckBox.isSelected();
-            int slot = Integer.parseInt(slotField.getText().trim());
 
             if (pokemonName.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "Pokemon name cannot be empty", "Error", JOptionPane.ERROR_MESSAGE);
                 return;
             }
 
-            if (abilityName.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Ability name cannot be empty", "Error", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-
             System.out.println("Pokemon Name: " + pokemonName);  // Debugging line
-            System.out.println("Ability Name: " + abilityName);  // Debugging line
 
             Pokemon newPokemon = new Pokemon(pokemonName);
-            Ability newAbility = new Ability(abilityName, isHidden, slot);
 
             DataAccessManager dam = DataAccessManager.getInstance();
 
             System.out.println("Before Insert Pokemon");  // Debugging line
             int pokemonId = dam.insertPokemon(newPokemon);
             System.out.println("Pokemon ID: " + pokemonId);  // Debugging line
-
-            System.out.println("Before Insert Ability");  // Debugging line
-            int abilityId = dam.insertAbility(newAbility);
-            System.out.println("Ability ID: " + abilityId);  // Debugging line
-
-            dam.linkPokemonWithAbility(pokemonId, abilityId, isHidden, slot);
 
             JOptionPane.showMessageDialog(this, "Pokemon and ability added successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
             loadData();  // Refresh the table data
@@ -348,90 +232,49 @@ public class UserInterfaceFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_insertAbilityActionPerformed
 
-    private void abilityNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_abilityNameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_abilityNameFieldActionPerformed
-
-    private void isHiddenCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_isHiddenCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_isHiddenCheckBoxActionPerformed
-
-    private void slotFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_slotFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_slotFieldActionPerformed
-
-    private void updateAbilityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateAbilityActionPerformed
-        // TODO add your handling code here:
-        try {
-            String abilityIdStr = updateAbilityIDField.getText().trim();
-            if (abilityIdStr.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Ability ID cannot be empty", "Error", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-            int abilityId = Integer.parseInt(abilityIdStr);
-            String newAbilityName = abilityNameField.getText().trim();
-
-            DataAccessManager.getInstance().updateAbilityName(abilityId, newAbilityName);
-
-            JOptionPane.showMessageDialog(this, "Ability name updated successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
-            loadData();  // Refresh the table data
-        } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "Invalid Ability ID", "Error", JOptionPane.ERROR_MESSAGE);
-        } catch (SQLException ex) {
-            Logger.getLogger(UserInterfaceFrame.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Error updating Ability name: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_updateAbilityActionPerformed
-
-    private void updateAbilityIDFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateAbilityIDFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_updateAbilityIDFieldActionPerformed
-
     private void updatePokemonNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updatePokemonNameActionPerformed
         // TODO add your handling code here:
+        String oldName = pokemonNameField.getText();
+        if (oldName == null || oldName.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Please enter the current name of the Pokémon", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        String newName = promptForNewName("Pokémon", oldName);
+        if (newName == null || newName.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "New name cannot be empty", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
         try {
-            String pokemonIdStr = updatePokemonIDField.getText().trim();
-            if (pokemonIdStr.isEmpty()) {
-                JOptionPane.showMessageDialog(this, "Pokemon ID cannot be empty", "Error", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-            int pokemonId = Integer.parseInt(pokemonIdStr);
-            String newPokemonName = pokemonNameField.getText().trim();
-
-            DataAccessManager.getInstance().updatePokemonName(pokemonId, newPokemonName);
-
-            JOptionPane.showMessageDialog(this, "Pokemon name updated successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
+            DataAccessManager.getInstance().updatePokemonName(oldName, newName);
+            JOptionPane.showMessageDialog(this, "Pokémon name updated successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
             loadData();  // Refresh the table data
-        } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "Invalid Pokemon ID", "Error", JOptionPane.ERROR_MESSAGE);
         } catch (SQLException ex) {
             Logger.getLogger(UserInterfaceFrame.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Error updating Pokemon name: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error updating Pokémon name: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
+
     }//GEN-LAST:event_updatePokemonNameActionPerformed
 
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
-        int pokemonId = Integer.parseInt(updatePokemonIDField.getText());
+        try {
+            String pokemonName = JOptionPane.showInputDialog(this, "Enter the name of the Pokémon to delete:", "Delete Pokémon", JOptionPane.PLAIN_MESSAGE);
+            if (pokemonName == null || pokemonName.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "Pokémon name cannot be empty", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
-    try {
-        // Llamar al método deletePokemonWithAbilities del PokemonDAO
-        DataAccessManager.getInstance().deletePokemonWithAbilities(pokemonId);
-        
-        // Mostrar un mensaje de éxito
-        JOptionPane.showMessageDialog(this, "Pokemon and associated abilities deleted successfully.", "Success", JOptionPane.INFORMATION_MESSAGE);
+            DataAccessManager.getInstance().deletePokemonByName(pokemonName);
 
-        // Recargar los datos en la tabla después de eliminar el Pokémon
-        loadData();  // Suponiendo que esta es una función que recarga los datos en la tabla
-    } catch (SQLException ex) {
-        // Manejar cualquier excepción SQLException que pueda ocurrir
-        Logger.getLogger(UserInterfaceFrame.class.getName()).log(Level.SEVERE, null, ex);
-        JOptionPane.showMessageDialog(this, "Error deleting pokemon and associated abilities: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-    } catch (NumberFormatException ex) {
-        // Manejar una excepción NumberFormatException si no se puede convertir el texto a un número entero
-        Logger.getLogger(UserInterfaceFrame.class.getName()).log(Level.SEVERE, null, ex);
-        JOptionPane.showMessageDialog(this, "Please enter a valid Pokemon ID.", "Error", JOptionPane.ERROR_MESSAGE);
-    }
+            JOptionPane.showMessageDialog(this, "Pokémon deleted successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
+            loadData();  // Refresh the table data
+
+        } catch (SQLException ex) {
+            Logger.getLogger(UserInterfaceFrame.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, "Error deleting Pokémon: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_deleteActionPerformed
 
     /**
@@ -474,52 +317,34 @@ public class UserInterfaceFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField abilityNameField;
     private javax.swing.JButton delete;
     private javax.swing.JButton insertAbility;
-    private javax.swing.JCheckBox isHiddenCheckBox;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton loadAll;
     private javax.swing.JButton loadOne;
     private javax.swing.JTable mostrarPokemon;
     private javax.swing.JTextField pokemonNameField;
-    private javax.swing.JTextField slotField;
-    private javax.swing.JButton updateAbility;
-    private javax.swing.JTextField updateAbilityIDField;
-    private javax.swing.JTextField updatePokemonIDField;
     // End of variables declaration//GEN-END:variables
 
     private void loadData() throws SQLException {
-        List<Pokemon> allPokemons = DataAccessManager.getInstance().loadAllPokemonWithAbilities();
+        List<Pokemon> allPokemons = DataAccessManager.getInstance().loadAllPokemon();
 
         DefaultTableModel dtmP = new NotEditableTableModel();
 
         dtmP.addColumn("ID pokemon");
         dtmP.addColumn("Pokemon");
-        dtmP.addColumn("Abilities");
 
         for (int i = 0; i < allPokemons.size(); i++) {
-            Object[] dtmRowP = new Object[3];
+            Object[] dtmRowP = new Object[2];
             Pokemon pokemons = allPokemons.get(i);
 
             dtmRowP[0] = pokemons.getPokID();
             dtmRowP[1] = pokemons.getPokName();
-            StringBuilder abilities = new StringBuilder();
-            for (Ability ability : pokemons.getAbility()) {
-                if (abilities.length() > 0) {
-                    abilities.append(", ");
-                }
-                abilities.append(ability.getAbilName());
-            }
-            dtmRowP[2] = abilities.toString();
+
             dtmP.addRow(dtmRowP);
         }
 
@@ -561,6 +386,10 @@ public class UserInterfaceFrame extends javax.swing.JFrame {
             Logger.getLogger(UserInterfaceFrame.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this, "Error retrieving data from database.", "Database Error", JOptionPane.ERROR_MESSAGE);
         }
+    }
+
+    private String promptForNewName(String entityType, String oldName) {
+        return JOptionPane.showInputDialog(this, "Enter new name for the " + entityType + " '" + oldName + "':", "Update " + entityType, JOptionPane.PLAIN_MESSAGE);
     }
 
     private void insertPokAbil() {

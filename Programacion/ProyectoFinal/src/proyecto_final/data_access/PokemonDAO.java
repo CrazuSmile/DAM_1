@@ -100,23 +100,35 @@ public class PokemonDAO extends DataAccessObject {
         }
     }
 
-    public void updatePokemonName(int pokID, String newName) throws SQLException {
-        String sql = "UPDATE pokemon SET pok_name = ? WHERE pok_id = ?";
+    public void updatePokemonName(String oldName, String newName) throws SQLException {
+        String sql = "UPDATE pokemon SET pok_name = ? WHERE pok_name = ?";
         try (PreparedStatement stmt = cnt.prepareStatement(sql)) {
             stmt.setString(1, newName);
-            stmt.setInt(2, pokID);
+            stmt.setString(2, oldName);
             stmt.executeUpdate();
         }
     }
 
-    protected void deletePokemon(int pokemonId) throws SQLException {
-        String query = "DELETE FROM pokemon WHERE pok_id = ?";
-        try (PreparedStatement stmt = cnt.prepareStatement(query)) {
-            stmt.setInt(1, pokemonId);
-            int rowsAffected = stmt.executeUpdate();
-            if (rowsAffected == 0) {
-                throw new SQLException("No rows were deleted for Pokemon with ID: " + pokemonId);
-            }
+    public void deletePokemonByName(String name) throws SQLException {
+        // First delete the associated abilities
+        String deleteAbilitiesSql = "DELETE FROM pokemon_abilities WHERE pok_id = (SELECT pok_id FROM pokemon WHERE pok_name = ?)";
+        try (PreparedStatement stmt = cnt.prepareStatement(deleteAbilitiesSql)) {
+            stmt.setString(1, name);
+            stmt.executeUpdate();
+        }
+
+        // Delete the associated base stats
+        String deleteBaseStatsSql = "DELETE FROM base_stats WHERE pok_id = (SELECT pok_id FROM pokemon WHERE pok_name = ?)";
+        try (PreparedStatement stmt = cnt.prepareStatement(deleteBaseStatsSql)) {
+            stmt.setString(1, name);
+            stmt.executeUpdate();
+        }
+
+        // Then delete the pokemon
+        String deletePokemonSql = "DELETE FROM pokemon WHERE pok_name = ?";
+        try (PreparedStatement stmt = cnt.prepareStatement(deletePokemonSql)) {
+            stmt.setString(1, name);
+            stmt.executeUpdate();
         }
     }
 
